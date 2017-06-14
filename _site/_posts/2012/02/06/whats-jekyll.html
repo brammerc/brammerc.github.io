@@ -49,7 +49,17 @@
 
   <body class="theme-base-0d">
 
-    <div class="sidebar">
+    <head>
+	<!-- Load JQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Load jquery.cookie plugin (optional) -->
+	<script type="text/javascript" src="/navgoco/src/jquery.cookie.js"></script>
+	<!-- Load jquery.navgoco plugin js and css files -->
+	<script type="text/javascript" src="/navgoco/src/jquery.navgoco.js"></script>
+	<link rel="stylesheet" href="/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
+</head>
+
+<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
@@ -57,23 +67,46 @@
           Human Performance Analytics
         </a>
       </h1>
-      <p class="lead">A data science blog dedicated to enlightening and informing those with a vested interest in health, physical fitness, and sport.</p>
+      <p class="lead">A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport</p>
     </div>
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Blog Home</a>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$('.nav').navgoco();
+	});
+    </script>
+    <ul class="nav">
+	    <li><a href="/">Blog</a>
+		    <ul>
+			    <li><a href="/blog/archive/">Archive</a></li>
+			    <li><a href="/blog/#Categories">Categories</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/about">About</a>
+		    <ul>
+			    <li><a href="/about/#Mission">Mission</a></li>
+			    <li><a href="/about/##Objectives">Objectives</a></li>
+			    <li><a href="/about/##Contributors">Contributors</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/research">Research</a>
+		    <ul>
+			    <li><a href="/research/lanebias/">Lane Bias</a></li>
+			    <li><a href="/research/olympicbias/">Swimsuit Bias</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/contact">Contact</a></li>
+	    <li><a href="https://github.com/brammerc" target="_blank">Github</a></li>
+    </ul>
+    
+    
 
-      
-      <a class="sidebar-nav-item" href="/author">Author</a>
-      <a class="sidebar-nav-item" href="/research">Research</a>
-      
-    </nav>
-
-    <p>&copy; 2016. <a href="/">Chris Brammer</a>. All contents under 
+    <p>&copy; 2017. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
 	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
 	unless otherwise noted.</p>
   </div>
 </div>
+
 
 
     <div class="content container">
@@ -90,33 +123,36 @@
 
 <p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
 
-  <div class="previous">
+</div>
+
+<div class="related">
+	
+	<span class="related-posts">
+		Published in categories
+		
+	</span>
+	
+	<br>
+	
+	<span class="related-posts">
+		Tagged with 
+		
+	</span>
+	
+</div>
+
+<div class="pagination">
+  
+    <span class="pagination-item older">Previous</span>
+  
+  
+    
+      <a class="pagination-item newer" href="/_posts/2012/02/07/example-content.html">Next</a>
+    
   
 </div>
-<div class="archive">
-	<a href="/blog/archive/" title="an archive of all posts">see all posts<!-- &rarr;--></a>
-</div>
-<div class="next">
-	
-	  <a href="/_posts/2012/02/07/example-content.html" title="Next post">newer &rarr;</a>
-	
-</div>
-</div>
-<!--<div id="holder">
-    <div class="headernav-post">
-      <div class="previous">
-  
-</div>
-<div class="archive">
-	<a href="/blog/archive/" title="an archive of all posts">see all posts<!-- &rarr;--></a>
-</div>
-<div class="next">
-	
-	  <a href="/_posts/2012/02/07/example-content.html" title="Next post">newer &rarr;</a>
-	
-</div>
-    </div>
-</div> -->
+
+
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
@@ -149,7 +185,9 @@
       </li>
     
   </ul>
+  <a class="graybutton" href="/blog/archive/" title="an archive of all posts">Blog Archive</a>
 </div>
+
 
     </div>
 

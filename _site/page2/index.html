@@ -49,7 +49,17 @@
 
   <body class="theme-base-0d">
 
-    <div class="sidebar">
+    <head>
+	<!-- Load JQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Load jquery.cookie plugin (optional) -->
+	<script type="text/javascript" src="/navgoco/src/jquery.cookie.js"></script>
+	<!-- Load jquery.navgoco plugin js and css files -->
+	<script type="text/javascript" src="/navgoco/src/jquery.navgoco.js"></script>
+	<link rel="stylesheet" href="/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
+</head>
+
+<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
@@ -57,23 +67,46 @@
           Human Performance Analytics
         </a>
       </h1>
-      <p class="lead">A data science blog dedicated to enlightening and informing those with a vested interest in health, physical fitness, and sport.</p>
+      <p class="lead">A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport</p>
     </div>
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Blog Home</a>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$('.nav').navgoco();
+	});
+    </script>
+    <ul class="nav">
+	    <li><a href="/">Blog</a>
+		    <ul>
+			    <li><a href="/blog/archive/">Archive</a></li>
+			    <li><a href="/blog/#Categories">Categories</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/about">About</a>
+		    <ul>
+			    <li><a href="/about/#Mission">Mission</a></li>
+			    <li><a href="/about/##Objectives">Objectives</a></li>
+			    <li><a href="/about/##Contributors">Contributors</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/research">Research</a>
+		    <ul>
+			    <li><a href="/research/lanebias/">Lane Bias</a></li>
+			    <li><a href="/research/olympicbias/">Swimsuit Bias</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/contact">Contact</a></li>
+	    <li><a href="https://github.com/brammerc" target="_blank">Github</a></li>
+    </ul>
+    
+    
 
-      
-      <a class="sidebar-nav-item" href="/author">Author</a>
-      <a class="sidebar-nav-item" href="/research">Research</a>
-      
-    </nav>
-
-    <p>&copy; 2016. <a href="/">Chris Brammer</a>. All contents under 
+    <p>&copy; 2017. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
 	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
 	unless otherwise noted.</p>
   </div>
 </div>
+
 
 
     <div class="content container">
@@ -82,12 +115,50 @@ Human Performance Analytics
 </h1>
 <!--Exploratory data analysis (letter values, boxplots, letter value boxplots, density plots, stem-and-leaf, QQ plots...Re-expression, robust-resistant linear fit to bivariate data, G&H, Smoothing (spline, lowess)), Time series analysis (smoothing techniques, fouier (cos simulation), ARMA, ARIMA, ARIMAX, VARIMAX), Multivariate anlysis (matrix algebra, MANOVA, cluster analysis, scree plot, factor analysis, multiple regression, linear mixed effect models)  --> 
 
-<h4>This blog aims to provide examples of the various methods used to collect, manage, process, visualize, and analyze human performance data.</h4>
+<h4>This blog seeks to demonstrate how to extract valuable information from the ever-growing sea of human performance data.</h4>
 <hr/>
 
-<div class="posts">
-  
-  <div class="post">
+<div class= "posts">
+
+    <div class="post">
+    <h1 class="post-title">
+      <a href="/_posts/2013/09/27/density-plots.html">
+        Density Plots
+      </a>
+    </h1>
+
+    <span class="post-date">27 Sep 2013</span>
+      
+	    <p>
+	    	<a href="/_posts/2013/09/27/density-plots.html"><img class="centered" src="/figs/density-plot-post.png" alt=""></a>
+    	</p>
+    	
+    <p>The default graphical display of most plotting functions in R is very limited (and usually not very pretty). But that doesn’t mean that we should conform with those crude figures.</p>
+
+
+    <p>	<a class="graybutton" href="/_posts/2013/09/27/density-plots.html">Read more</a></p>
+  <hr/>
+
+    <div class="post">
+    <h1 class="post-title">
+      <a href="/_posts/2013/08/27/letter-value-displays.html">
+        Letter Value Displays
+      </a>
+    </h1>
+
+    <span class="post-date">27 Aug 2013</span>
+      
+	    <p>
+	    	<a href="/_posts/2013/08/27/letter-value-displays.html"><img class="centered" src="/figs/density-plot-post.png" alt=""></a>
+    	</p>
+    	
+    <p>The default graphical display of most plotting functions in R is very limited (and usually not very pretty). But that doesn’t mean that we should conform with those crude figures.</p>
+
+
+    <p>	<a class="graybutton" href="/_posts/2013/08/27/letter-value-displays.html">Read more</a></p>
+  <hr/>
+
+    <div class="post">
     <h1 class="post-title">
       <a href="/_posts/2012/02/07/example-content.html">
         Example content
@@ -95,7 +166,7 @@ Human Performance Analytics
     </h1>
 
     <span class="post-date">07 Feb 2012</span>
-
+      
     <div class="message">
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 </div>
@@ -227,34 +298,14 @@ Human Performance Analytics
 
 <p>Want to see something else added? <a href="https://github.com/poole/poole/issues/new">Open an issue.</a></p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="/_posts/2012/02/06/whats-jekyll.html">
-        What's Jekyll?
-      </a>
-    </h1>
+    <p>	<a class="graybutton" href="/_posts/2012/02/07/example-content.html">Read more</a></p>
+  <hr/>
 
-    <span class="post-date">06 Feb 2012</span>
-
-    <p><a href="http://jekyllrb.com">Jekyll</a> is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From <a href="https://github.com/mojombo/jekyll/blob/master/README.markdown">the project’s readme</a>:</p>
-
-<blockquote>
-  <p>Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.</p>
-</blockquote>
-
-<p>It’s an immensely useful tool and one we encourage you to use here with Hyde.</p>
-
-<p>Find out more by <a href="https://github.com/mojombo/jekyll">visiting the project on GitHub</a>.</p>
-
-  </div>
-  
 </div>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page3">Older</a>
   
   
     

@@ -8,12 +8,12 @@ Human Performance Analytics
 </h1>
 <!--Exploratory data analysis (letter values, boxplots, letter value boxplots, density plots, stem-and-leaf, QQ plots...Re-expression, robust-resistant linear fit to bivariate data, G&H, Smoothing (spline, lowess)), Time series analysis (smoothing techniques, fouier (cos simulation), ARMA, ARIMA, ARIMAX, VARIMAX), Multivariate anlysis (matrix algebra, MANOVA, cluster analysis, scree plot, factor analysis, multiple regression, linear mixed effect models)  --> 
 
-<h4>This blog aims to provide examples of the various methods used to collect, manage, process, visualize, and analyze human performance data.</h4>
+<h4>This blog seeks to demonstrate how to extract valuable information from the ever-growing sea of human performance data.</h4>
 <hr/>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
+<div class= "posts">
+{% for post in paginator.posts %}
+    <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
         {{ post.title }}
@@ -21,10 +21,15 @@ Human Performance Analytics
     </h1>
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
+      {% if post.image %}
+	    <p>
+	    	<a href="{{ post.url }}"><img class="centered" src="/figs/{{post.image}}" alt=""></a>
+    	</p>
+    	{% endif %}
+    {{ post.excerpt }}
+    <p>	<a class="graybutton" href="{{ post.url }}">Read more</a></p>
+  <hr/>
+{% endfor %}
 </div>
 
 <div class="pagination">

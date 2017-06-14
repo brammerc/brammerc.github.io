@@ -15,18 +15,20 @@ gems: [jekyll-paginate]
 # Setup
 title:            Human Performance Analytics
 tagline:          ''
-description:      'A data science blog dedicated to enlightening and informing those with a vested interest in health, physical fitness, and sport.'
+description:      'A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport'
 url:              http://localhost:4000
 baseurl:          /
+excerpt_separator: <!--more-->
 
 author:
   name:           'Chris Brammer'
 #  url:            https://twitter.com/mdo
 
-paginate:         5
+paginate:         3
 
 # Custom vars
 #version:          2.1.0
 
-# github:
-#  repo:           https://github.com/poole/hyde
+github:
+  repo:           https://github.com/brammerc
+  hyde:           https://github.com/poole/hyde

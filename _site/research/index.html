@@ -49,7 +49,17 @@
 
   <body class="theme-base-0d">
 
-    <div class="sidebar">
+    <head>
+	<!-- Load JQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Load jquery.cookie plugin (optional) -->
+	<script type="text/javascript" src="/navgoco/src/jquery.cookie.js"></script>
+	<!-- Load jquery.navgoco plugin js and css files -->
+	<script type="text/javascript" src="/navgoco/src/jquery.navgoco.js"></script>
+	<link rel="stylesheet" href="/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
+</head>
+
+<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
@@ -57,23 +67,46 @@
           Human Performance Analytics
         </a>
       </h1>
-      <p class="lead">A data science blog dedicated to enlightening and informing those with a vested interest in health, physical fitness, and sport.</p>
+      <p class="lead">A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport</p>
     </div>
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Blog Home</a>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$('.nav').navgoco();
+	});
+    </script>
+    <ul class="nav">
+	    <li><a href="/">Blog</a>
+		    <ul>
+			    <li><a href="/blog/archive/">Archive</a></li>
+			    <li><a href="/blog/#Categories">Categories</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/about">About</a>
+		    <ul>
+			    <li><a href="/about/#Mission">Mission</a></li>
+			    <li><a href="/about/##Objectives">Objectives</a></li>
+			    <li><a href="/about/##Contributors">Contributors</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/research">Research</a>
+		    <ul>
+			    <li><a href="/research/lanebias/">Lane Bias</a></li>
+			    <li><a href="/research/olympicbias/">Swimsuit Bias</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/contact">Contact</a></li>
+	    <li><a href="https://github.com/brammerc" target="_blank">Github</a></li>
+    </ul>
+    
+    
 
-      
-      <a class="sidebar-nav-item" href="/author">Author</a>
-      <a class="sidebar-nav-item" href="/research">Research</a>
-      
-    </nav>
-
-    <p>&copy; 2016. <a href="/">Chris Brammer</a>. All contents under 
+    <p>&copy; 2017. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
 	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
 	unless otherwise noted.</p>
   </div>
 </div>
+
 
 
     <div class="content container">
@@ -81,17 +114,7 @@
   <!-- <h1 class="page-title">Research</h1>% -->
   <h1 id="publications-and-presentations">Publications and Presentations</h1>
 
-<h4 id="content-from-some-of-the-peer-reviewed-manuscripts-conference-proceedings-and-presentations-within-the-data-science-domain-that-i-have-had-the-pleasure-of-producing-with-much-assistance-throughout-my-academic-career">Content from some of the peer-reviewed manuscripts, conference proceedings and presentations within the data science domain that I have had the pleasure of producing, with much assistance, throughout my academic career.</h4>
-
-<hr />
-
-<h2 id="swimsuit-bias-at-the-2008-olympic-games">Swimsuit bias at the 2008 Olympic Games</h2>
-<p>Inspired by the <a href="http://similardiversity.net" target="_blank" title="similar diversity">Similar Diversity</a> <br />
-project of Philipp Steinweber and Andreas Koller, I spent some time to produce <br />
-<a href="starwars">my own version</a> of an arc diagram… based on the Star Wars movie scripts.<br />
-- 2000, 2004, 2008 paper, 2012 acsm, shiny app with predictions</p>
-
-<p><a class="graybutton" href="/research/olympicbias">Read more</a></p>
+<h4 id="peer-reviewed-manuscripts-conference-proceedings-and-presentations-that-represent-the-culmination-of-some-of-our-data-science-projects">Peer-reviewed manuscripts, conference proceedings and presentations that represent the culmination of some of our data science projects.</h4>
 
 <hr />
 
@@ -102,6 +125,16 @@ project of Philipp Steinweber and Andreas Koller, I spent some time to produce <
 <p>Some of <a href="/research/lanebias">my weird</a> and abstract plots in R</p>
 
 <p><a class="graybutton" href="/research/lanebias/">Read more</a></p>
+
+<hr />
+
+<h2 id="swimsuit-bias-at-the-2008-olympic-games">Swimsuit bias at the 2008 Olympic Games</h2>
+<p>Inspired by the <a href="http://similardiversity.net" target="_blank" title="similar diversity">Similar Diversity</a> <br />
+project of Philipp Steinweber and Andreas Koller, I spent some time to produce <br />
+<a href="starwars">my own version</a> of an arc diagram… based on the Star Wars movie scripts.<br />
+- 2000, 2004, 2008 paper, 2012 acsm, shiny app with predictions</p>
+
+<p><a class="graybutton" href="/research/olympicbias">Read more</a></p>
 
 <hr />
 

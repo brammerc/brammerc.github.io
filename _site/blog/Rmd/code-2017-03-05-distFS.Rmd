@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="swimming performance, data analysis, statistics, data visualization" />
+  <meta name="author" content='Chris Brammer' />
+  <meta name="description" content="Website of Chris Brammer" />
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Distance freestyle split (in)consistency &middot; Human Performance Analytics
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/public/icon/favicon.ico">    
+  <link rel="apple-touch-icon" sizes="57x57" href="/public/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/public/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/public/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/public/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/public/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/public/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/public/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/public/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/public/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/public/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/icon/favicon-16x16.png">
+  <link rel="manifest" href="/public/icon/manifest.json">
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico"> -->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <head>
+	<!-- Load JQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Load jquery.cookie plugin (optional) -->
+	<script type="text/javascript" src="/navgoco/src/jquery.cookie.js"></script>
+	<!-- Load jquery.navgoco plugin js and css files -->
+	<script type="text/javascript" src="/navgoco/src/jquery.navgoco.js"></script>
+	<link rel="stylesheet" href="/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
+</head>
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Human Performance Analytics
+        </a>
+      </h1>
+      <p class="lead">A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport</p>
+    </div>
+
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$('.nav').navgoco();
+	});
+    </script>
+    <ul class="nav">
+	    <li><a href="/">Blog</a>
+		    <ul>
+			    <li><a href="/blog/archive/">Archive</a></li>
+			    <li><a href="/blog/#Categories">Categories</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/about">About</a>
+		    <ul>
+			    <li><a href="/about/#Mission">Mission</a></li>
+			    <li><a href="/about/##Objectives">Objectives</a></li>
+			    <li><a href="/about/##Contributors">Contributors</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/research">Research</a>
+		    <ul>
+			    <li><a href="/research/lanebias/">Lane Bias</a></li>
+			    <li><a href="/research/olympicbias/">Swimsuit Bias</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/contact">Contact</a></li>
+	    <li><a href="https://github.com/brammerc" target="_blank">Github</a></li>
+    </ul>
+    
+    
+
+    <p>&copy; 2017. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
+	unless otherwise noted.</p>
+  </div>
+</div>
+
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 >Distance freestyle split (in)consistency</h1>
+  <span class="post-date">05 Mar 2017</span>
+  Distance freestyle split variability is not well understood. There are some important questions related to this topic that the swimming community might ask: Do swimmer employ different 'split strategies'? If so, is split strategy related to performance (ie, do slower swimmers have a different strategy than faster swimmers?). If so, then does a slower swimmer that adopts the 'better' strategy improve her/his performance?  
+
+<!--more-->
+
+Assuming you knew nothing about adolescent boys and girls, and you were interested in whether boys are faster than girls in the 50-yard freestyle, and if so, by how much. So you quickly jot down the performances of a small sample of boys and girls from the most recent local swim meet. Your data might look something like this:
+
+``` {r echo=FALSE}
+subject = seq(1,6,1)
+sex = c(rep("girl",3),rep("boy",3))
+performance = c(29.81,30.02,30.24,25.31,25.87,25.98)
+data = as.data.frame(cbind(subject, sex, performance))
+print(data,row.names = FALSE)
+```
+
+Based on this data you might conclude that boys are faster than girls in the 50-yard freestyle, since the slowest boy is almost 4 seconds faster than the fastest girl. But it is possible that boys and girls perform the same in the 50 freestlyle, or that girls are faster than boys, because your sample is simply not representative of the entire population of girl and boy swimmers. The general linear model is used to provide a precise estimate of the performance difference between boys and girls, as well as how likely that difference was due to drawing an unrepresentative sample. The basic model is as follows:
+
+```
+performance ~ sex
+```
+
+which states that the dependent variable, performance, is a function of, or is predicted by, the independent variable, sex. Sometimes, the variable to the left of the tilde is called the outcome variable, and variables to the right are called explanatory variables. Now, obviously sex does not completely explain 50-yard freestyle performance, as there are a whole host of other factors that are known to affect performance. For the time being, we'll assume that we don't know what these other factors are, or that we simply do not have measurements of these factors. However, even if we measure and account for all factors that affect performance, we would still have stuff influencing performance that we cannot measure or control. Thus, we must update our model to include that which we cannot explain, otherwise known as random variation or random error in the estimate of performance.
+
+```
+performance ~ sex + error
+```
+
+Now our model of performance is a function of sex, which for a given swimmer is fixed and does not change, plus an error term, which represents everything that is not sex and that, within the purview of our experiment, is uncontrollable and random. The error term can also be defined as the difference between the model's estimate of performance and actual performance, after accounting for the effect of sex. Obviously, we want to minimize the error in our estimate of performance.
+
+In the simplest model, where there is one predictor variable (sex) and one outcome variable (performance), the error is minimized by ... So, using a line to represent the relationship between sex and performance, the linear model quantifies the effect of sex on performance, where the _slope of the line_ represents the magnitude of its effect. The following plot visualizes the linear relationship between sex and performance. 
+
+``` {r echo = FALSE, fig.width=5,fig.height=5}
+subject = seq(1,6,1)
+sex = c(rep("girl",3),rep("boy",3))
+performance = c(29.81,30.02,30.24,25.31,25.87,25.98)
+data = cbind.data.frame(subject, sex, performance)
+mod = lm(data$performance~c(1,1,1,0,0,0))
+plot(c(1,1,1,0,0,0),data$performance,xlim=c(-.3,1.3),ylab="50-yard FS performance (sec)",xaxt="n",xlab="",pch=15,col=c(rep("red",3),rep("blue",3)))
+axis(1, at=c(0,1), labels=c("Boys","Girls"))
+abline(mod)
+text(.1,29,"performance = 25.72 + 4.30*sex")
+```
+
+Here, values for sex are 0 for boys and 1 for girls. The line's intercept, `25.72`, is the estimate of performance for boys. Given the slope of the line, `4.30`, the estimate of performance for girls, where `sex = 1`, is `25.72 + 4.30`, or `30.02 seconds`. Interestingly, the values of _25.72_ and _30.02_ are equal to the mean performance for _boys_ and _girls_, respectively. The effect of sex is such that girls are, on average, 4.30 seconds slower than boys. Whether the magnitude of this effect is significant is a topic of a future discussion.
+
+<hr/>
+
+New post: The process of identifying athletes with the potential for future success in a particular sport, termed talent identification, and the ensuing teaching and training (talent development) of the selected athletes are strategies employed by numerous national sporting federations to achieve excellence at international competitions such as the Olympic Games and World Championships. 
+
+--more--
+
+However, talent identification and development are not limited to national sporting federations seeking elite-level performers, as arguably the largest and most diverse talent identification and development programs in the world reside within the US collegiate sporting system. Accross all levels of performance, regardless of available athletic scholarships, accurate evaluation of potential team members is a major challenge for college coaches. 
+
+In the introductory post regarding linear models, I presented an example of predicting swim performance using only the factor of sex. But if we were to draw a random sample of swimmers, how well would we be able to predict their performance knowing only whether they were a boy or girl? If we knew more about these athletes, then we would be able to improve our estimate of their performance. The most obvious variable that can greatly improve our model's ability to predict performance is age. Although there can be a significant range of ability within a given age, it is well understood that a swimmer's level of performance depends on their age. The best ten year-old boy, for example, is not as fast as the best fourteen year-old boy. The following figure depicts the relationship between performance and age, for both boys and girls, in the 50-yard freestyle.
+
+``` {r echo = TRUE}
+age.med <- readRDS("age.med.rds")
+head(age.med)
+#par(mar = c(4,2,4,2) + 0.1)
+#plot(age.med[,1],age.med[,2])
+plot(age.med$swimmer_age,age.med$seconds.med,type="p",axes=FALSE,ylim=c(20,50),xlim=c(6,24),pch=15,xlab="",ylab="",main="USAS Boys 50-yard FS\n2004-2014, N = 510,000")
+axis(1,at=seq(7,24,1),labels=seq(7,24,1),pos=20)
+axis(2,at=seq(20,50,5),labels=seq(20,50,5),pos=7)
+title(ylab = "50 FS performance (sec)", cex.lab = 1,line = 1)
+title(xlab="Age",cex.lab = 1,line = 2)
+```
+
+So it's clear that our model should include both sex and age as predictors of performance. The updated model looks like this:
+
+```
+performance ~ sex + age + error
+```
+
+However, it is also quite clear that the relationship between age and performance is not linear. This is a problem because the linear model tries to account for the effect of age on performance using a line, like this:
+
+Modeling the relationship between age and performance in this way will lead to greater error in our estimates of performance; thus, we must solve the problem by incorporating the non-linear relationship into the linear model. But wait, how can we account for a non-linear relationship using a straight line?! A simple solution is to express the relationship as a quadratic such that:
+
+```
+performance ~ sex + age^2 + age + error
+```
+
+Adding the square of age as another input variable does much better to estimate performance than our previous model. 
+
+[plot of model 2]
+
+But how much better is our model? Very often the data scientist is asked to justify the inclusion of additional variables, as the [law of parsimony] arguably prevails when developing models. That is, if the model's performance does not improve significantly with the addition of another variable, then it is best to keep it simple and exclude the variable. How much of an improvement in performance is needed to justify the inclusion of a variable? What is/are our metrics for measuring the model's performance? 
+
+</div>
+
+<div class="related">
+	
+	<br>
+	
+	<span class="related-posts">
+		Tagged with 
+		
+		<a href="http://localhost:4000/blog/tags/#lowess" title="lowess">lowess</a>&nbsp;
+		
+		<a href="http://localhost:4000/blog/tags/#application" title="application">application</a>&nbsp;
+		
+	</span>
+	
+</div>
+
+<div class="pagination">
+  
+    <span class="pagination-item older">Previous</span>
+  
+  
+    <span class="pagination-item newer">Next</span>
+  
+</div>
+
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/_posts/2014/04/26/hrv-vo2max.html">
+            Hear rate variability during exercise
+            <small>26 Apr 2014</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/_posts/2013/12/28/introducing-hyde.html">
+            Introducing Hyde
+            <small>28 Dec 2013</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/_posts/2013/09/27/density-plots.html">
+            Density Plots
+            <small>27 Sep 2013</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+  <a class="graybutton" href="/blog/archive/" title="an archive of all posts">Blog Archive</a>
+</div>
+
+
+    </div>
+
+  </body>
+</html>

@@ -49,7 +49,17 @@
 
   <body class="theme-base-0d">
 
-    <div class="sidebar">
+    <head>
+	<!-- Load JQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Load jquery.cookie plugin (optional) -->
+	<script type="text/javascript" src="/navgoco/src/jquery.cookie.js"></script>
+	<!-- Load jquery.navgoco plugin js and css files -->
+	<script type="text/javascript" src="/navgoco/src/jquery.navgoco.js"></script>
+	<link rel="stylesheet" href="/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
+</head>
+
+<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
@@ -57,23 +67,46 @@
           Human Performance Analytics
         </a>
       </h1>
-      <p class="lead">A data science blog dedicated to enlightening and informing those with a vested interest in health, physical fitness, and sport.</p>
+      <p class="lead">A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport</p>
     </div>
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="/">Blog Home</a>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$('.nav').navgoco();
+	});
+    </script>
+    <ul class="nav">
+	    <li><a href="/">Blog</a>
+		    <ul>
+			    <li><a href="/blog/archive/">Archive</a></li>
+			    <li><a href="/blog/#Categories">Categories</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/about">About</a>
+		    <ul>
+			    <li><a href="/about/#Mission">Mission</a></li>
+			    <li><a href="/about/##Objectives">Objectives</a></li>
+			    <li><a href="/about/##Contributors">Contributors</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/research">Research</a>
+		    <ul>
+			    <li><a href="/research/lanebias/">Lane Bias</a></li>
+			    <li><a href="/research/olympicbias/">Swimsuit Bias</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/contact">Contact</a></li>
+	    <li><a href="https://github.com/brammerc" target="_blank">Github</a></li>
+    </ul>
+    
+    
 
-      
-      <a class="sidebar-nav-item" href="/author">Author</a>
-      <a class="sidebar-nav-item" href="/research">Research</a>
-      
-    </nav>
-
-    <p>&copy; 2016. <a href="/">Chris Brammer</a>. All contents under 
+    <p>&copy; 2017. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
 	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
 	unless otherwise noted.</p>
   </div>
 </div>
+
 
 
     <div class="content container">
@@ -120,6 +153,182 @@
 		
 	</ul>
 </div>
+
+<h3 id="categories">Categories</h3>
+<div id="tag_cloud">
+
+<a href="#exploratory data analysis" title="exploratory data analysis" rel="2">exploratory data analysis (2)</a>
+
+<a href="#time series analysis" title="time series analysis" rel="1">time series analysis (1)</a>
+
+<a href="#cardiovascular" title="cardiovascular" rel="1">cardiovascular (1)</a>
+
+<a href="#linear modeling" title="linear modeling" rel="1">linear modeling (1)</a>
+
+<a href="#USAS" title="USAS" rel="1">USAS (1)</a>
+
+</div>
+
+<ul class="listing">
+
+  <li class="listing-seperator" id="exploratory data analysis">exploratory data analysis</li>
+
+  <li class="listing-item">
+  <time datetime="09-27-2013">09-27-2013</time>
+  <a href="http://localhost:4000/_posts/2013/09/27/density-plots.html" title="Density Plots">Density Plots</a>
+  </li>
+
+  <li class="listing-item">
+  <time datetime="08-27-2013">08-27-2013</time>
+  <a href="http://localhost:4000/_posts/2013/08/27/letter-value-displays.html" title="Letter Value Displays">Letter Value Displays</a>
+  </li>
+
+
+  <li class="listing-seperator" id="time series analysis">time series analysis</li>
+
+  <li class="listing-item">
+  <time datetime="04-26-2014">04-26-2014</time>
+  <a href="http://localhost:4000/_posts/2014/04/26/hrv-vo2max.html" title="Hear rate variability during exercise">Hear rate variability during exercise</a>
+  </li>
+
+
+  <li class="listing-seperator" id="cardiovascular">cardiovascular</li>
+
+  <li class="listing-item">
+  <time datetime="04-26-2014">04-26-2014</time>
+  <a href="http://localhost:4000/_posts/2014/04/26/hrv-vo2max.html" title="Hear rate variability during exercise">Hear rate variability during exercise</a>
+  </li>
+
+
+  <li class="listing-seperator" id="linear modeling">linear modeling</li>
+
+  <li class="listing-item">
+  <time datetime="06-05-2016">06-05-2016</time>
+  <a href="http://localhost:4000/_posts/2016/06/05/lm.html" title="The Linear Model Explained">The Linear Model Explained</a>
+  </li>
+
+
+  <li class="listing-seperator" id="USAS">USAS</li>
+
+  <li class="listing-item">
+  <time datetime="06-05-2016">06-05-2016</time>
+  <a href="http://localhost:4000/_posts/2016/06/05/lm.html" title="The Linear Model Explained">The Linear Model Explained</a>
+  </li>
+
+
+</ul>
+
+<script src="/media/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script>
+
+<script language="javascript">
+$.fn.tagcloud.defaults = {
+    size: {start: 1, end: 1, unit: 'em'},
+      color: {start: '#f8e0e6', end: '#ff3333'}
+};
+
+$(function () {
+    $('#tag_cloud a').tagcloud();
+});
+</script>
+
+<h3 id="tags">Tags</h3>
+
+<div id="tag_cloud">
+
+<a href="#data displays" title="data displays" rel="2">data displays</a>
+
+<a href="#instruction" title="instruction" rel="2">instruction</a>
+
+<a href="#fourier transformation" title="fourier transformation" rel="1">fourier transformation</a>
+
+<a href="#auto-correlation" title="auto-correlation" rel="1">auto-correlation</a>
+
+<a href="#application" title="application" rel="2">application</a>
+
+<a href="#prediction" title="prediction" rel="1">prediction</a>
+
+</div>
+
+<ul class="listing">
+
+  <li class="listing-seperator" id="data displays">data displays</li>
+
+  <li class="listing-item">
+  <time datetime="09-27-2013">09-27-2013</time>
+  <a href="http://localhost:4000/_posts/2013/09/27/density-plots.html" title="Density Plots">Density Plots</a>
+  </li>
+
+  <li class="listing-item">
+  <time datetime="08-27-2013">08-27-2013</time>
+  <a href="http://localhost:4000/_posts/2013/08/27/letter-value-displays.html" title="Letter Value Displays">Letter Value Displays</a>
+  </li>
+
+
+  <li class="listing-seperator" id="instruction">instruction</li>
+
+  <li class="listing-item">
+  <time datetime="09-27-2013">09-27-2013</time>
+  <a href="http://localhost:4000/_posts/2013/09/27/density-plots.html" title="Density Plots">Density Plots</a>
+  </li>
+
+  <li class="listing-item">
+  <time datetime="08-27-2013">08-27-2013</time>
+  <a href="http://localhost:4000/_posts/2013/08/27/letter-value-displays.html" title="Letter Value Displays">Letter Value Displays</a>
+  </li>
+
+
+  <li class="listing-seperator" id="fourier transformation">fourier transformation</li>
+
+  <li class="listing-item">
+  <time datetime="04-26-2014">04-26-2014</time>
+  <a href="http://localhost:4000/_posts/2014/04/26/hrv-vo2max.html" title="Hear rate variability during exercise">Hear rate variability during exercise</a>
+  </li>
+
+
+  <li class="listing-seperator" id="auto-correlation">auto-correlation</li>
+
+  <li class="listing-item">
+  <time datetime="04-26-2014">04-26-2014</time>
+  <a href="http://localhost:4000/_posts/2014/04/26/hrv-vo2max.html" title="Hear rate variability during exercise">Hear rate variability during exercise</a>
+  </li>
+
+
+  <li class="listing-seperator" id="application">application</li>
+
+  <li class="listing-item">
+  <time datetime="06-05-2016">06-05-2016</time>
+  <a href="http://localhost:4000/_posts/2016/06/05/lm.html" title="The Linear Model Explained">The Linear Model Explained</a>
+  </li>
+
+  <li class="listing-item">
+  <time datetime="04-26-2014">04-26-2014</time>
+  <a href="http://localhost:4000/_posts/2014/04/26/hrv-vo2max.html" title="Hear rate variability during exercise">Hear rate variability during exercise</a>
+  </li>
+
+
+  <li class="listing-seperator" id="prediction">prediction</li>
+
+  <li class="listing-item">
+  <time datetime="06-05-2016">06-05-2016</time>
+  <a href="http://localhost:4000/_posts/2016/06/05/lm.html" title="The Linear Model Explained">The Linear Model Explained</a>
+  </li>
+
+
+</ul>
+
+<script src="/scripts/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script>
+
+<script language="javascript">
+$.fn.tagcloud.defaults = {
+    size: {start: 1, end: 1, unit: 'em'},
+      color: {start: '#f8e0e6', end: '#ff3333'}
+};
+
+$(function () {
+    $('#tag_cloud a').tagcloud();
+});
+</script>
+
 
 </div>
 

@@ -4,7 +4,7 @@
  <title>Human Performance Analytics</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-08-21T17:31:32-04:00</updated>
+ <updated>2017-06-07T23:30:51-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Chris Brammer</name>
@@ -19,6 +19,8 @@
    <id>http://localhost:4000/_posts/2016/06/05/lm</id>
    <content type="html">&lt;p&gt;Linear models are tools to help us understand the world&lt;br /&gt;
 Let’s explore an example of using a linear model to describe the relationship between swim performance and one or more predictor variables, such as sex and age.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;p&gt;Assuming you knew nothing about adolescent boys and girls, and you were interested in whether boys are faster than girls in the 50-yard freestyle, and if so, by how much. So you quickly jot down the performances of a small sample of boys and girls from the most recent local swim meet. Your data might look something like this:&lt;/p&gt;
 

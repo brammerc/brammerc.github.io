@@ -1,3 +1,13 @@
+<head>
+	<!-- Load JQuery -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Load jquery.cookie plugin (optional) -->
+	<script type="text/javascript" src="/navgoco/src/jquery.cookie.js"></script>
+	<!-- Load jquery.navgoco plugin js and css files -->
+	<script type="text/javascript" src="/navgoco/src/jquery.navgoco.js"></script>
+	<link rel="stylesheet" href="/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
+</head>
+
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -8,11 +18,48 @@
       </h1>
       <p class="lead">{{ site.description }}</p>
     </div>
+    
+    {% comment %}
+
+    <script type="text/javascript">
+	$(document).ready(function() {
+		$('.nav').navgoco();
+	});
+    </script>
+    <ul class="nav">
+	    <li><a href="{{ site.baseurl }}">Blog</a>
+		    <ul>
+			    <li><a href="/blog/archive/">Archive</a></li>
+			    <li><a href="/blog/#Categories">Categories</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/about">About</a>
+		    <ul>
+			    <li><a href="/about/#Mission">Mission</a></li>
+			    <li><a href="/about/##Objectives">Objectives</a></li>
+			    <li><a href="/about/##Contributors">Contributors</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/research">Research</a>
+		    <ul>
+			    <li><a href="/research/lanebias/">Lane Bias</a></li>
+			    <li><a href="/research/olympicbias/">Swimsuit Bias</a></li>
+		    </ul>
+	    </li>
+	    <li><a href="/contact">Contact</a></li>
+	    <li><a href="{{ site.github.repo }}" target="_blank">Github</a></li>
+    </ul>
+    
+    {% endcomment %}
 
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Blog Home</a>
+      <a class="sidebar-nav-item" href="/research">Research</a>
+      <a class="sidebar-nav-item" href="/about">About</a>
+      <a class="sidebar-nav-item" href="/contact">Contact</a>
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}" target="_blank">GitHub</a>
 
-      {% comment %}
+    {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         `layout: page` in the front-matter. See readme for usage.
       
@@ -25,17 +72,20 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-      {% endcomment %}
-      <a class="sidebar-nav-item" href="/author">Author</a>
+      
       <a class="sidebar-nav-item" href="/research">Research</a>
-      {% comment %}
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
+      <a class="sidebar-nav-item" href="/about">About</a>
+      <a class="sidebar-nav-item" href="/contact">Contact</a>
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}" target="_blank">GitHub</a>
+      
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
-      {% endcomment %}
+      
     </nav>
+    {% endcomment %}
 
-    <p>&copy; {{ site.time | date: '%Y' }}. <a href="/">Chris Brammer</a>. All contents under 
+    <p>&copy; {{ site.time | date: '%Y' }}. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
 	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
 	unless otherwise noted.</p>
   </div>
 </div>
+
