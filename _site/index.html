@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="swimming performance, data analysis, statistics, data visualization" />
+  <meta name="author" content='Chris Brammer' />
+  <meta name="description" content="Website of Chris Brammer" />
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Human Performance Analytics &middot; 
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/public/icon/favicon.ico">    
+  <link rel="apple-touch-icon" sizes="57x57" href="/public/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/public/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/public/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/public/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/public/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/public/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/public/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/public/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/public/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/public/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/icon/favicon-16x16.png">
+  <link rel="manifest" href="/public/icon/manifest.json">
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico"> -->
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          Human Performance Analytics
+        </a>
+      </h1>
+      <p class="lead">A data science blog dedicated to enlightening and informing those with a vested interest in health, physical fitness, and sport.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" href="/">Blog Home</a>
+
+      
+      <a class="sidebar-nav-item" href="/author">Author</a>
+      <a class="sidebar-nav-item" href="/research">Research</a>
+      
+    </nav>
+
+    <p>&copy; 2016. <a href="/">Chris Brammer</a>. All contents under 
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
+	unless otherwise noted.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <h1>
+Human Performance Analytics
+</h1>
+<!--Exploratory data analysis (letter values, boxplots, letter value boxplots, density plots, stem-and-leaf, QQ plots...Re-expression, robust-resistant linear fit to bivariate data, G&H, Smoothing (spline, lowess)), Time series analysis (smoothing techniques, fouier (cos simulation), ARMA, ARIMA, ARIMAX, VARIMAX), Multivariate anlysis (matrix algebra, MANOVA, cluster analysis, scree plot, factor analysis, multiple regression, linear mixed effect models)  --> 
+
+<h4>This blog aims to provide examples of the various methods used to collect, manage, process, visualize, and analyze human performance data.</h4>
+<hr/>
+
+<div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/_posts/2016/06/05/lm.html">
+        The Linear Model Explained
+      </a>
+    </h1>
+
+    <span class="post-date">05 Jun 2016</span>
+
+    <p>Linear models are tools to help us understand the world<br />
+Let’s explore an example of using a linear model to describe the relationship between swim performance and one or more predictor variables, such as sex and age.</p>
+
+<p>Assuming you knew nothing about adolescent boys and girls, and you were interested in whether boys are faster than girls in the 50-yard freestyle, and if so, by how much. So you quickly jot down the performances of a small sample of boys and girls from the most recent local swim meet. Your data might look something like this:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##  subject  sex performance
+##        1 girl       29.81
+##        2 girl       30.02
+##        3 girl       30.24
+##        4  boy       25.31
+##        5  boy       25.87
+##        6  boy       25.98</code></pre></figure>
+
+<p>Based on this data you might conclude that boys are faster than girls in the 50-yard freestyle, since the slowest boy is almost 4 seconds faster than the fastest girl. But it is possible that boys and girls perform the same in the 50 freestlyle, or that girls are faster than boys, because your sample is simply not representative of the entire population of girl and boy swimmers. The general linear model is used to provide a precise estimate of the performance difference between boys and girls, as well as how likely that difference was due to drawing an unrepresentative sample. The basic model is as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>performance ~ sex
+</code></pre>
+</div>
+
+<p>which states that the dependent variable, performance, is a function of, or is predicted by, the independent variable, sex. Sometimes, the variable to the left of the tilde is called the outcome variable, and variables to the right are called explanatory variables. Now, obviously sex does not completely explain 50-yard freestyle performance, as there are a whole host of other factors that are known to affect performance. For the time being, we’ll assume that we don’t know what these other factors are, or that we simply do not have measurements of these factors. However, even if we measure and account for all factors that affect performance, we would still have stuff influencing performance that we cannot measure or control. Thus, we must update our model to include that which we cannot explain, otherwise known as random variation or random error in the estimate of performance.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>performance ~ sex + error
+</code></pre>
+</div>
+
+<p>Now our model of performance is a function of sex, which for a given swimmer is fixed and does not change, plus an error term, which represents everything that is not sex and that, within the purview of our experiment, is uncontrollable and random. The error term can also be defined as the difference between the model’s estimate of performance and actual performance, after accounting for the effect of sex. Obviously, we want to minimize the error in our estimate of performance.</p>
+
+<p>In the simplest model, where there is one predictor variable (sex) and one outcome variable (performance), the error is minimized by … So, using a line to represent the relationship between sex and performance, the linear model quantifies the effect of sex on performance, where the <em>slope of the line</em> represents the magnitude of its effect. The following plot visualizes the linear relationship between sex and performance.</p>
+
+<p><img src="/figs/code-2016-06-05-lm/unnamed-chunk-2-1.png" alt="center" /></p>
+
+<p>Here, values for sex are 0 for boys and 1 for girls. The line’s intercept, <code class="highlighter-rouge">25.72</code>, is the estimate of performance for boys. Given the slope of the line, <code class="highlighter-rouge">4.30</code>, the estimate of performance for girls, where <code class="highlighter-rouge">sex = 1</code>, is <code class="highlighter-rouge">25.72 + 4.30</code>, or <code class="highlighter-rouge">30.02 seconds</code>. Interestingly, the values of <em>25.72</em> and <em>30.02</em> are equal to the mean performance for <em>boys</em> and <em>girls</em>, respectively. The effect of sex is such that girls are, on average, 4.30 seconds slower than boys. Whether the magnitude of this effect is significant is a topic of a future discussion.</p>
+
+<hr />
+
+<p>New post: The process of identifying athletes with the potential for future success in a particular sport, termed talent identification, and the ensuing teaching and training (talent development) of the selected athletes are strategies employed by numerous national sporting federations to achieve excellence at international competitions such as the Olympic Games and World Championships.</p>
+
+<p>–more–</p>
+
+<p>However, talent identification and development are not limited to national sporting federations seeking elite-level performers, as arguably the largest and most diverse talent identification and development programs in the world reside within the US collegiate sporting system. Accross all levels of performance, regardless of available athletic scholarships, accurate evaluation of potential team members is a major challenge for college coaches.</p>
+
+<p>In the introductory post regarding linear models, I presented an example of predicting swim performance using only the factor of sex. But if we were to draw a random sample of swimmers, how well would we be able to predict their performance knowing only whether they were a boy or girl? If we knew more about these athletes, then we would be able to improve our estimate of their performance. The most obvious variable that can greatly improve our model’s ability to predict performance is age. Although there can be a significant range of ability within a given age, it is well understood that a swimmer’s level of performance depends on their age. The best ten year-old boy, for example, is not as fast as the best fourteen year-old boy. The following figure depicts the relationship between performance and age, for both boys and girls, in the 50-yard freestyle.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">age.med</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">readRDS</span><span class="p">(</span><span class="s2">"age.med.rds"</span><span class="p">)</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">age.med</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##   swimmer_age seconds.med seconds.n seconds.LF seconds.UF
+## 1           7       46.83     15385      41.84      53.53
+## 2           8       41.10     28711      37.23      46.26
+## 3           9       37.22     42024      34.07      41.36
+## 4          10       34.16     53681      31.56      37.57
+## 5          11       31.98     58411      29.76      34.79
+## 6          12       29.53     59697      27.71      31.97</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1">#par(mar = c(4,2,4,2) + 0.1)
+#plot(age.med[,1],age.med[,2])
+</span><span class="n">plot</span><span class="p">(</span><span class="n">age.med</span><span class="o">$</span><span class="n">swimmer_age</span><span class="p">,</span><span class="n">age.med</span><span class="o">$</span><span class="n">seconds.med</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s2">"p"</span><span class="p">,</span><span class="n">axes</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span><span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">50</span><span class="p">),</span><span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">6</span><span class="p">,</span><span class="m">24</span><span class="p">),</span><span class="n">pch</span><span class="o">=</span><span class="m">15</span><span class="p">,</span><span class="n">xlab</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span><span class="n">main</span><span class="o">=</span><span class="s2">"USAS Boys 50-yard FS\n2004-2014, N = 510,000"</span><span class="p">)</span><span class="w">
+</span><span class="n">axis</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">at</span><span class="o">=</span><span class="n">seq</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">labels</span><span class="o">=</span><span class="n">seq</span><span class="p">(</span><span class="m">7</span><span class="p">,</span><span class="m">24</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="n">pos</span><span class="o">=</span><span class="m">20</span><span class="p">)</span><span class="w">
+</span><span class="n">axis</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="n">at</span><span class="o">=</span><span class="n">seq</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">50</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="n">labels</span><span class="o">=</span><span class="n">seq</span><span class="p">(</span><span class="m">20</span><span class="p">,</span><span class="m">50</span><span class="p">,</span><span class="m">5</span><span class="p">),</span><span class="n">pos</span><span class="o">=</span><span class="m">7</span><span class="p">)</span><span class="w">
+</span><span class="n">title</span><span class="p">(</span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"50 FS performance (sec)"</span><span class="p">,</span><span class="w"> </span><span class="n">cex.lab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">
+</span><span class="n">title</span><span class="p">(</span><span class="n">xlab</span><span class="o">=</span><span class="s2">"Age"</span><span class="p">,</span><span class="n">cex.lab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span></code></pre></figure>
+
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/_posts/2014/04/26/hrv-vo2max.html">
+        Hear rate variability during exercise
+      </a>
+    </h1>
+
+    <span class="post-date">26 Apr 2014</span>
+
+    <!--more-->
+
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/_posts/2013/12/28/introducing-hyde.html">
+        Introducing Hyde
+      </a>
+    </h1>
+
+    <span class="post-date">28 Dec 2013</span>
+
+    <p>Hyde is a brazen two-column <a href="http://jekyllrb.com">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. It’s based on <a href="http://getpoole.com">Poole</a>, the Jekyll butler.</p>
+
+<h3 id="built-on-poole">Built on Poole</h3>
+
+<p>Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by <a href="https://twitter.com/mdo">@mdo</a>. Poole, and every theme built on it (like Hyde here) includes the following:</p>
+
+<ul>
+  <li>Complete Jekyll setup included (layouts, config, <a href="/404">404</a>, <a href="/atom.xml">RSS feed</a>, posts, and <a href="/about">example page</a>)</li>
+  <li>Mobile friendly design and development</li>
+  <li>Easily scalable text and component sizing with <code class="highlighter-rouge">rem</code> units in the CSS</li>
+  <li>Support for a wide gamut of HTML elements</li>
+  <li>Related posts (time-based, because Jekyll) below each post</li>
+  <li>Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)</li>
+</ul>
+
+<h3 id="hyde-features">Hyde features</h3>
+
+<p>In addition to the features of Poole, Hyde adds the following:</p>
+
+<ul>
+  <li>Sidebar includes support for textual modules and a dynamically generated navigation with active link support</li>
+  <li>Two orientations for content and sidebar, default (left sidebar) and <a href="https://github.com/poole/lanyon#reverse-layout">reverse</a> (right sidebar), available via <code class="highlighter-rouge">&lt;body&gt;</code> classes</li>
+  <li><a href="https://github.com/poole/hyde#themes">Eight optional color schemes</a>, available via <code class="highlighter-rouge">&lt;body&gt;</code> classes</li>
+</ul>
+
+<p><a href="https://github.com/poole/hyde#readme">Head to the readme</a> to learn more.</p>
+
+<h3 id="browser-support">Browser support</h3>
+
+<p>Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.</p>
+
+<h3 id="download">Download</h3>
+
+<p>Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.</p>
+
+<p>Thanks!</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/_posts/2013/09/27/density-plots.html">
+        Density Plots
+      </a>
+    </h1>
+
+    <span class="post-date">27 Sep 2013</span>
+
+    <p>The default graphical display of most plotting functions in R is very limited (and usually not very pretty). But that doesn’t mean that we should conform with those crude figures.</p>
+
+<!--more-->
+
+<p><img src="/images/blog/density-plot-post.png" alt="" /></p>
+
+<h3 id="a-basic-plot-example">A Basic Plot Example</h3>
+
+<p>For this post I’ll use a simple example by plotting density curves of some random generated variables. For instance, let’s generate three normal distributions with different parameters, and their corresponding estimated densities:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># setting seed for random numbers
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">1111</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># random normal variables
+</span><span class="n">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">500</span><span class="p">)</span><span class="w">
+</span><span class="n">var2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+</span><span class="n">var3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="m">-1</span><span class="p">,</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># densities
+</span><span class="n">den1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">density</span><span class="p">(</span><span class="n">var1</span><span class="p">)</span><span class="w">
+</span><span class="n">den2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">density</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span><span class="w">
+</span><span class="n">den3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">density</span><span class="p">(</span><span class="n">var3</span><span class="p">)</span></code></pre></figure>
+
+<p>We can plot each of the densities with the function <code class="highlighter-rouge">plot()</code> which displays a very raw figure. These displays are good for quick visual inspection, but they are very limited for anything else (especially if we plan to include them in some slides for presentation purposes)</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># individual density plots
+</span><span class="n">plot</span><span class="p">(</span><span class="n">den1</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">den2</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">den3</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/plot-density1-1.png" alt="center" /></p>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/plot-density2-1.png" alt="center" /></p>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/plot-density3-1.png" alt="center" /></p>
+
+<h3 id="improved-plots">Improved Plots</h3>
+
+<p>Of course, we can write some lines of code to substantially improve our graphics. First, let’s define some colors for each distribution using the function <code class="highlighter-rouge">hsv()</code></p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># colors for each distribution
+</span><span class="n">col1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hsv</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.65</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w">
+</span><span class="n">col2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hsv</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.85</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w">
+</span><span class="n">col3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hsv</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.55</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span></code></pre></figure>
+
+<p>And now let’s combine them in a single graphic tweaking the right parameters to produce a visually aesthetic plot:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># set graphic margins
+</span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">
+</span><span class="c1"># call new plot
+</span><span class="n">plot.new</span><span class="p">()</span><span class="w">
+</span><span class="c1"># plot window
+</span><span class="n">plot.window</span><span class="p">(</span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-6</span><span class="p">,</span><span class="m">6</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.4</span><span class="p">))</span><span class="w">
+</span><span class="c1"># add axes
+</span><span class="n">axis</span><span class="p">(</span><span class="n">side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="n">from</span><span class="o">=</span><span class="m">-6</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray20"</span><span class="p">,</span><span class="w"> 
+     </span><span class="n">lwd.ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span><span class="p">,</span><span class="w"> </span><span class="n">cex.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray20"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+</span><span class="n">axis</span><span class="p">(</span><span class="n">side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-6</span><span class="p">,</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="n">from</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="m">0.4</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="m">0.1</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray20"</span><span class="p">,</span><span class="w">
+     </span><span class="n">las</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">lwd.ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">cex.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray20"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+</span><span class="c1"># density 1
+</span><span class="n">polygon</span><span class="p">(</span><span class="n">den1</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">den1</span><span class="o">$</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col1</span><span class="p">)</span><span class="w">
+</span><span class="c1"># density 2
+</span><span class="n">polygon</span><span class="p">(</span><span class="n">den2</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">den2</span><span class="o">$</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col2</span><span class="p">)</span><span class="w">
+</span><span class="c1"># density 3
+</span><span class="n">polygon</span><span class="p">(</span><span class="n">den3</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">den3</span><span class="o">$</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col3</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col3</span><span class="p">)</span><span class="w">
+</span><span class="c1"># add legends
+</span><span class="n">text</span><span class="p">(</span><span class="m">1.3</span><span class="p">,</span><span class="w"> </span><span class="m">0.35</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Normal(0, 1)"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray30"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
+</span><span class="n">text</span><span class="p">(</span><span class="m">3.8</span><span class="p">,</span><span class="w"> </span><span class="m">0.15</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Normal(1, 1.5)"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray30"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
+</span><span class="n">text</span><span class="p">(</span><span class="m">-3.6</span><span class="p">,</span><span class="w"> </span><span class="m">0.15</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Normal(-1, 1.5)"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray30"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
+</span><span class="c1"># turn off par
+</span><span class="n">par</span><span class="p">(</span><span class="n">op</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/density-plot-1.png" alt="center" /></p>
+
+<h3 id="using-ggplot2">Using ggplot2</h3>
+
+<p>We can also use the package <code class="highlighter-rouge">"ggplot2"</code> to obtain a similar graphic. Here’s how:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># data frame with normal variables
+</span><span class="n">distribs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="w">
+  </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">var1</span><span class="p">,</span><span class="w"> </span><span class="n">var2</span><span class="p">,</span><span class="w"> </span><span class="n">var3</span><span class="p">),</span><span class="w">
+  </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gl</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># load ggplot2
+</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># plot
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distribs</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">type</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_density</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">type</span><span class="p">),</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/density-ggplot-1.png" alt="center" /></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/_posts/2013/08/27/letter-value-displays.html">
+        Letter Value Displays
+      </a>
+    </h1>
+
+    <span class="post-date">27 Aug 2013</span>
+
+    <p>The default graphical display of most plotting functions in R is very limited (and usually not very pretty). But that doesn’t mean that we should conform with those crude figures.</p>
+
+<!--more-->
+
+<p><img src="/images/blog/density-plot-post.png" alt="" /></p>
+
+<h3 id="a-basic-plot-example">A Basic Plot Example</h3>
+
+<p>For this post I’ll use a simple example by plotting density curves of some random generated variables. For instance, let’s generate three normal distributions with different parameters, and their corresponding estimated densities:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># setting seed for random numbers
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">1111</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># random normal variables
+</span><span class="n">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">500</span><span class="p">)</span><span class="w">
+</span><span class="n">var2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+</span><span class="n">var3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">500</span><span class="p">,</span><span class="w"> </span><span class="m">-1</span><span class="p">,</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># densities
+</span><span class="n">den1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">density</span><span class="p">(</span><span class="n">var1</span><span class="p">)</span><span class="w">
+</span><span class="n">den2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">density</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span><span class="w">
+</span><span class="n">den3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">density</span><span class="p">(</span><span class="n">var3</span><span class="p">)</span></code></pre></figure>
+
+<p>We can plot each of the densities with the function <code class="highlighter-rouge">plot()</code> which displays a very raw figure. These displays are good for quick visual inspection, but they are very limited for anything else (especially if we plan to include them in some slides for presentation purposes)</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># individual density plots
+</span><span class="n">plot</span><span class="p">(</span><span class="n">den1</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">den2</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">den3</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/plot-density1-1.png" alt="center" /></p>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/plot-density2-1.png" alt="center" /></p>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/plot-density3-1.png" alt="center" /></p>
+
+<h3 id="improved-plots">Improved Plots</h3>
+
+<p>Of course, we can write some lines of code to substantially improve our graphics. First, let’s define some colors for each distribution using the function <code class="highlighter-rouge">hsv()</code></p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># colors for each distribution
+</span><span class="n">col1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hsv</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.65</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w">
+</span><span class="n">col2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hsv</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.85</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span><span class="w">
+</span><span class="n">col3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hsv</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.55</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.8</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span></code></pre></figure>
+
+<p>And now let’s combine them in a single graphic tweaking the right parameters to produce a visually aesthetic plot:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># set graphic margins
+</span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">
+</span><span class="c1"># call new plot
+</span><span class="n">plot.new</span><span class="p">()</span><span class="w">
+</span><span class="c1"># plot window
+</span><span class="n">plot.window</span><span class="p">(</span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-6</span><span class="p">,</span><span class="m">6</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0.4</span><span class="p">))</span><span class="w">
+</span><span class="c1"># add axes
+</span><span class="n">axis</span><span class="p">(</span><span class="n">side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="n">from</span><span class="o">=</span><span class="m">-6</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray20"</span><span class="p">,</span><span class="w"> 
+     </span><span class="n">lwd.ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.25</span><span class="p">,</span><span class="w"> </span><span class="n">cex.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray20"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+</span><span class="n">axis</span><span class="p">(</span><span class="n">side</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-6</span><span class="p">,</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="n">from</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="o">=</span><span class="m">0.4</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="m">0.1</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray20"</span><span class="p">,</span><span class="w">
+     </span><span class="n">las</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">lwd.ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">cex.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">col.axis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray20"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">)</span><span class="w">
+</span><span class="c1"># density 1
+</span><span class="n">polygon</span><span class="p">(</span><span class="n">den1</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">den1</span><span class="o">$</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col1</span><span class="p">)</span><span class="w">
+</span><span class="c1"># density 2
+</span><span class="n">polygon</span><span class="p">(</span><span class="n">den2</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">den2</span><span class="o">$</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col2</span><span class="p">)</span><span class="w">
+</span><span class="c1"># density 3
+</span><span class="n">polygon</span><span class="p">(</span><span class="n">den3</span><span class="o">$</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">den3</span><span class="o">$</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col3</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col3</span><span class="p">)</span><span class="w">
+</span><span class="c1"># add legends
+</span><span class="n">text</span><span class="p">(</span><span class="m">1.3</span><span class="p">,</span><span class="w"> </span><span class="m">0.35</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Normal(0, 1)"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray30"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
+</span><span class="n">text</span><span class="p">(</span><span class="m">3.8</span><span class="p">,</span><span class="w"> </span><span class="m">0.15</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Normal(1, 1.5)"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray30"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
+</span><span class="n">text</span><span class="p">(</span><span class="m">-3.6</span><span class="p">,</span><span class="w"> </span><span class="m">0.15</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Normal(-1, 1.5)"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gray30"</span><span class="p">,</span><span class="w"> </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
+</span><span class="c1"># turn off par
+</span><span class="n">par</span><span class="p">(</span><span class="n">op</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/density-plot-1.png" alt="center" /></p>
+
+<h3 id="using-ggplot2">Using ggplot2</h3>
+
+<p>We can also use the package <code class="highlighter-rouge">"ggplot2"</code> to obtain a similar graphic. Here’s how:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># data frame with normal variables
+</span><span class="n">distribs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="w">
+  </span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">var1</span><span class="p">,</span><span class="w"> </span><span class="n">var2</span><span class="p">,</span><span class="w"> </span><span class="n">var3</span><span class="p">),</span><span class="w">
+  </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gl</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># load ggplot2
+</span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># plot
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">distribs</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">values</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">type</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_density</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">type</span><span class="p">),</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/figs/code-2014-08-16-Density-Curves/density-ggplot-1.png" alt="center" /></p>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/page2">Older</a>
+  
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+    </div>
+
+  </body>
+</html>

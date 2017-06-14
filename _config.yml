@@ -1,0 +1,32 @@
+# Dependencies
+markdown:         kramdown
+#highlighter:      pygments
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
+# Permalinks
+permalink: /_posts/:year/:month/:day/:title.html
+#permalink: /_posts/:categories/:year/:month/:day/:title.html
+#relative_permalinks: true
+gems: [jekyll-paginate]
+
+# Setup
+title:            Human Performance Analytics
+tagline:          ''
+description:      'A data science blog dedicated to enlightening and informing those with a vested interest in health, physical fitness, and sport.'
+url:              http://localhost:4000
+baseurl:          /
+
+author:
+  name:           'Chris Brammer'
+#  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+#version:          2.1.0
+
+# github:
+#  repo:           https://github.com/poole/hyde

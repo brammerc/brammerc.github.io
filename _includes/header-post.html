@@ -1,0 +1,13 @@
+<div class="previous">
+  {% if page.previous %}
+	  <a href="{{ page.previous.url }}" title="Previous post">&larr; older</a>
+	{% endif %}
+</div>
+<div class="archive">
+	<a href="/blog/archive/" title="an archive of all posts">see all posts<!-- &rarr;--></a>
+</div>
+<div class="next">
+	{% if page.next %}
+	  <a href="{{ page.next.url }}" title="Next post">newer &rarr;</a>
+	{% endif %}
+</div>
