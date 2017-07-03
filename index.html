@@ -4,11 +4,10 @@ title: Home
 ---
 
 <h1>
-Human Performance Analytics
+Swim Performance Analytics
 </h1>
-<!--Exploratory data analysis (letter values, boxplots, letter value boxplots, density plots, stem-and-leaf, QQ plots...Re-expression, robust-resistant linear fit to bivariate data, G&H, Smoothing (spline, lowess)), Time series analysis (smoothing techniques, fouier (cos simulation), ARMA, ARIMA, ARIMAX, VARIMAX), Multivariate anlysis (matrix algebra, MANOVA, cluster analysis, scree plot, factor analysis, multiple regression, linear mixed effect models)  --> 
 
-<h4>This blog seeks to demonstrate how to extract valuable information from the ever-growing sea of human performance data.</h4>
+<h4>This blog seeks to demonstrate how to extract valuable information from the ever-growing sea of swim performance data.</h4>
 <hr/>
 
 <div class= "posts">
@@ -34,15 +33,16 @@ Human Performance Analytics
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}"><i class="fa fa-lg fa-chevron-left"></i>&nbsp;&nbsp;&nbsp;Older</a>
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
+  <a class="pagination-item" href="/archive/" title="an archive of all posts">Blog Archive</a>
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer&nbsp;&nbsp;&nbsp;<i class="fa fa-lg fa-chevron-right"></i></a>
     {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer&nbsp;&nbsp;&nbsp;<i class="fa fa-lg fa-chevron-right"></i></a>
     {% endif %}
   {% else %}
     <span class="pagination-item newer">Newer</span>

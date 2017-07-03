@@ -4,10 +4,39 @@ layout: default
 
 <div class="post">
   <h1 >{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date">{{ page.date | date_to_string }} {% if page.tags.size < 1 %} {% else %}| <i class="fa fa-tags" style="font-size: .8em"></i> {% for tag in page.tags %}
+    <a href="{{ site.url }}/archive/tags/#{{ tag }}" style="font-size: 16px;">{{ tag }}&nbsp;</a>
+  {% endfor %} {% endif %} </span>
+  
   {{ content }}
 </div>
+{% include share-bar.html %}
+<div class="pagination">
+  {% if page.previous %}
+	  <a class="pagination-item older" href="{{ page.previous.url }}" title="Previous post"><i class="fa fa-lg fa-chevron-left"></i>&nbsp;&nbsp;&nbsp;Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  <a class="pagination-item" href="/archive/" title="an archive of all posts">Blog Archive</a>
+  {% if page.next %}
+    {% if page == 2 %}
+	  <a class="pagination-item newer" href="{{ page.next.url }}" title="Next post">Newer&nbsp;&nbsp;&nbsp;<i class="fa fa-lg fa-chevron-right"></i></a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ page.next.url }}">Newer&nbsp;&nbsp;&nbsp;<i class="fa fa-lg fa-chevron-right"></i></a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+{% include disqus.html %}
 
+<!---
+  <span class="post-date">{{ page.date | date_to_string }} | {% if page.tags %} {% for tag in page.tags %}
+  <span class="graybuttontag">
+    <a href="{{ site.url }}/archive/tags/#{{ tag }}" style="font-size: 16px;"><i class="fa fa-tags" style="font-size: .8em"></i>&nbsp;{{ tag }}</a>
+  </span>&nbsp;
+  {% endfor %} {% endif %} </span>
+  
 <div class="related">
 	{% if page.categories %}
 	<span class="related-posts">
@@ -17,7 +46,7 @@ layout: default
 		{% endfor %}
 	</span>
 	{% endif %}
-	<br>
+	<p></p>
 	{% if page.tags %}
 	<span class="related-posts">
 		Tagged with 
@@ -26,25 +55,9 @@ layout: default
 		{% endfor %}
 	</span>
 	{% endif %}
+	<p></p>
+	<p><a class="graybutton" href="/blog/archive/" title="an archive of all posts">Blog Archive</a></p>
 </div>
-
-<div class="pagination">
-  {% if page.previous %}
-	  <a class="pagination-item older" href="{{ page.previous.url }}" title="Previous post">Previous</a>
-  {% else %}
-    <span class="pagination-item older">Previous</span>
-  {% endif %}
-  {% if page.next %}
-    {% if page == 2 %}
-	  <a class="pagination-item newer" href="{{ page.next.url }}" title="Next post">Next</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ page.next.url }}">Next</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Next</span>
-  {% endif %}
-</div>
-
 
 <div class="related">
   <h2>Related Posts</h2>
@@ -62,4 +75,4 @@ layout: default
   </ul>
   <a class="graybutton" href="/blog/archive/" title="an archive of all posts">Blog Archive</a>
 </div>
-
+--->

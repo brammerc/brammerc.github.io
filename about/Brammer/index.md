@@ -21,7 +21,7 @@ Intrigued by human performance, other cultures, classical music, multimedia art,
 
 Seeking to be inspired, to inspire others, and to live on the edge between the past and the future, where life is happening.
 
-<a class="graybutton" href="/about/Brammer/Brammer_CV.pdf" target="_blank">curriculum vitae</a>  <a class="graybutton" href="http://www.linkedin.com/in/chrisbrammer" target="_blank">linkedin</a> 
+<a class="graybutton" href="/about/Brammer/Brammer_CV.pdf" target="_blank">curriculum vitae</a> 
 
 <hr>
 

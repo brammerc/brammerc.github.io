@@ -8,26 +8,25 @@ kramdown:
   
 # Permalinks
 permalink: /_posts/:year/:month/:day/:title.html
-#permalink: /_posts/:categories/:year/:month/:day/:title.html
 #relative_permalinks: true
 gems: [jekyll-paginate]
 
 # Setup
-title:            Human Performance Analytics
-tagline:          ''
-description:      'A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport'
+title:            Swim Performance Analytics
+tagline:          'Empowering swimming data scientists'
+description:      'A data science blog dedicated to informing those with a vested interest in all things swimming related'
 url:              http://localhost:4000
 baseurl:          /
 excerpt_separator: <!--more-->
 
-author:
-  name:           'Chris Brammer'
-#  url:            https://twitter.com/mdo
-
 paginate:         3
 
-# Custom vars
-#version:          2.1.0
+author:
+  name:           'Chris Brammer'
+
+linkedin: chrisbrammer
+twitter: brammerc
+instagram: clbsandwch
 
 github:
   repo:           https://github.com/brammerc

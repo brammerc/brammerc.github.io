@@ -10,10 +10,11 @@
   <meta name="description" content="Website of Chris Brammer" />
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="theme-color" content="#ffffff">
 
   <title>
     
-      Hear rate variability during exercise &middot; Human Performance Analytics
+      Hear rate variability during exercise &middot; Swim Performance Analytics
     
   </title>
 
@@ -22,25 +23,16 @@
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="/public/icon/favicon.ico">    
-  <link rel="apple-touch-icon" sizes="57x57" href="/public/icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/public/icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/public/icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/public/icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/public/icon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/public/icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/public/icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/public/icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/public/icon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/public/icon/android-icon-192x192.png">
+  <link rel="shortcut icon" href="/public/icon/favicon.ico">  
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/public/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/public/icon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/public/icon/favicon-16x16.png">
   <link rel="manifest" href="/public/icon/manifest.json">
-  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico"> -->
+  <link rel="mask-icon" href="/public/icon/safari-pinned-tab.svg" color="#5bbad5">
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> -->
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -49,58 +41,39 @@
 
   <body class="theme-base-0d">
 
-    <head>
-	<!-- Load JQuery -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<!-- Load jquery.cookie plugin (optional) -->
-	<script type="text/javascript" src="/navgoco/src/jquery.cookie.js"></script>
-	<!-- Load jquery.navgoco plugin js and css files -->
-	<script type="text/javascript" src="/navgoco/src/jquery.navgoco.js"></script>
-	<link rel="stylesheet" href="/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
-</head>
-
+    
 <div class="sidebar">
-  <div class="container sidebar-sticky">
+  <div class="container">
     <div class="sidebar-about">
       <h1>
         <a href="/">
-          Human Performance Analytics
+          Swim Performance Analytics
         </a>
       </h1>
-      <p class="lead">A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport</p>
+      <p class="lead">A data science blog dedicated to informing those with a vested interest in all things swimming related</p>
     </div>
 
-    <script type="text/javascript">
-	$(document).ready(function() {
-		$('.nav').navgoco();
-	});
-    </script>
-    <ul class="nav">
-	    <li><a href="/">Blog</a>
-		    <ul>
-			    <li><a href="/blog/archive/">Archive</a></li>
-			    <li><a href="/blog/#Categories">Categories</a></li>
-		    </ul>
-	    </li>
-	    <li><a href="/about">About</a>
-		    <ul>
-			    <li><a href="/about/#Mission">Mission</a></li>
-			    <li><a href="/about/##Objectives">Objectives</a></li>
-			    <li><a href="/about/##Contributors">Contributors</a></li>
-		    </ul>
-	    </li>
-	    <li><a href="/research">Research</a>
-		    <ul>
-			    <li><a href="/research/lanebias/">Lane Bias</a></li>
-			    <li><a href="/research/olympicbias/">Swimsuit Bias</a></li>
-		    </ul>
-	    </li>
-	    <li><a href="/contact">Contact</a></li>
-	    <li><a href="https://github.com/brammerc" target="_blank">Github</a></li>
-    </ul>
-    
-    
-
+    <nav class="sidebar-nav">
+      <a id="icon" class="sidebar-nav-item" href="/"><i class="fa fa-home fa-fw w3-hover-opacity"></i> Blog Home</a>
+      <a id="icon" class="sidebar-nav-item" href="/research"><i class="fa fa-bar-chart-o fa-fw w3-hover-opacity"></i> Research</a>
+      <a id="icon" class="sidebar-nav-item" href="/about"><i class="fa fa-question-circle-o fa-fw w3-hover-opacity"></i> About</a>
+      <a id="icon" class="sidebar-nav-item" href="/contact"><i class="fa fa-address-card-o fa-fw w3-hover-opacity"></i> Contact</a>
+      <a id="icon" href="https://github.com/brammerc" target="_blank"><i class="fa fa-github fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.linkedin.com/in/chrisbrammer" target="_blank"><i class="fa fa-linkedin fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.instagram.com/clbsandwch" target="_blank"><i class="fa fa-instagram fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.twitter.com/brammerc" target="_blank"><i class="fa fa-twitter fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="/atom.xml" target="_blank"><i class="fa fa-rss fa-fw w3-hover-opacity"></i></a>
+      <!---
+      <ul class="list-inline">
+          <li>
+            <a id="icon" href="https://github.com/brammerc" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+          </li>
+          <li>
+            <a id="icon" href="https://www.linkedin.com/in/chrisbrammer" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a>
+          </li>
+          <li>
+            <a id="icon" href="https://www.linkedin.com/in/chrisbrammer" target="_blank"><i class="fa fa-rss fa-fw"></i></a>
+          </li>
+        </ul>
+        --->
+      <!--- <a class="sidebar-nav-item" href="https://github.com/brammerc" target="_blank">GitHub</a> --->
+      <hr>
     <p>&copy; 2017. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
 	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
 	unless otherwise noted.</p>
@@ -112,15 +85,106 @@
     <div class="content container">
       <div class="post">
   <h1 >Hear rate variability during exercise</h1>
-  <span class="post-date">26 Apr 2014</span>
+  <span class="post-date">26 Apr 2014 | <i class="fa fa-tags" style="font-size: .8em"></i> 
+    <a href="http://localhost:4000/archive/tags/#fourier transformation" style="font-size: 16px;">fourier transformation&nbsp;</a>
+  
+    <a href="http://localhost:4000/archive/tags/#auto-correlation" style="font-size: 16px;">auto-correlation&nbsp;</a>
+  
+    <a href="http://localhost:4000/archive/tags/#application" style="font-size: 16px;">application&nbsp;</a>
+    </span>
+  
   <!--more-->
 
 
 </div>
+<!--- Thanks to Arthur Gareginyan for the share-bar script: https://mycyberuniverse.com/web/social-media-share-bar-jekyll-blog-website.html
+--->
 
+<div id="share-bar">
+	
+	<img src="/public/images/sharing-caring.png" style="margin:0px;">
+	
+	<div class="share-buttons">
+	    <a  href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000//blog/Rmd/code-2014-04-26-HRV-VO2max.Rmd"
+	        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+	        title="Share on Facebook" >
+	        <i class="fa fa-facebook-official share-button"> facebook</i>
+	    </a>
+
+	    <a  href="https://twitter.com/intent/tweet?text=Hear rate variability during exercise&url=http://localhost:4000//blog/Rmd/code-2014-04-26-HRV-VO2max.Rmd"
+	        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+	        title="Share on Twitter" >
+	        <i class="fa fa-twitter-share share-button"> twitter</i>
+	    </a>
+
+	    <a  href="http://www.reddit.com/submit?url=http://localhost:4000//blog/Rmd/code-2014-04-26-HRV-VO2max.Rmd"
+	        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+	        title="Share on Reddit" >
+	        <i class="fa fa-reddit-alien share-button"> reddit</i>
+	    </a>
+
+	    <a  href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000//blog/Rmd/code-2014-04-26-HRV-VO2max.Rmd&title=Hear rate variability during exercise&summary=&source=webjeda"
+	        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+	        title="Share on LinkedIn" >
+	        <i class="fa fa-linkedin-share share-button"> linkedin</i>
+	    </a>
+
+	    <a  href="mailto:?subject=Hear rate variability during exercise&amp;body=Check out this site http://localhost:4000//blog/Rmd/code-2014-04-26-HRV-VO2max.Rmd"
+	        title="Share via Email" >
+	        <i class="fa fa-envelope share-button"> email</i>
+	    </a>
+	</div>
+	
+</div>
+
+<!--- 
+<a  href="https://plus.google.com/share?url=http://localhost:4000//blog/Rmd/code-2014-04-26-HRV-VO2max.Rmd"
+	        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+	        title="Share on Google+" >
+	        <i class="fa fa-google-plus share-button"> google</i>
+	    </a>
+
+	    <a  href="http://pinterest.com/pin/create/button/?url=http://localhost:4000//blog/Rmd/code-2014-04-26-HRV-VO2max.Rmd"
+	        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+	        title="Share on Pinterest" >
+	        <i class="fa fa-pinterest-p share-button"> pinterest</i>
+	    </a>
+
+	    <a  href="http://www.tumblr.com/share/link?url=http://localhost:4000//blog/Rmd/code-2014-04-26-HRV-VO2max.Rmd"
+	        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+	        title="Share on Tumblr" >
+	        <i class="fa fa-tumblr share-button"> tumblr</i>
+	    </a>
+--->
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  <a class="pagination-item" href="/blog/archive/" title="an archive of all posts">Blog Archive</a>
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+
+
+<!---
+  <span class="post-date">26 Apr 2014 |  
+  <span class="graybuttontag">
+    <a href="http://localhost:4000/archive/tags/#fourier transformation" style="font-size: 16px;"><i class="fa fa-tags" style="font-size: .8em"></i>&nbsp;fourier transformation</a>
+  </span>&nbsp;
+  
+  <span class="graybuttontag">
+    <a href="http://localhost:4000/archive/tags/#auto-correlation" style="font-size: 16px;"><i class="fa fa-tags" style="font-size: .8em"></i>&nbsp;auto-correlation</a>
+  </span>&nbsp;
+  
+  <span class="graybuttontag">
+    <a href="http://localhost:4000/archive/tags/#application" style="font-size: 16px;"><i class="fa fa-tags" style="font-size: .8em"></i>&nbsp;application</a>
+  </span>&nbsp;
+    </span>
+  
 <div class="related">
 	
-	<br>
+	<p></p>
 	
 	<span class="related-posts">
 		Tagged with 
@@ -133,55 +197,20 @@
 		
 	</span>
 	
+	<p></p>
+	<p><a class="graybutton" href="/blog/archive/" title="an archive of all posts">Blog Archive</a></p>
 </div>
-
-<div class="pagination">
-  
-    <span class="pagination-item older">Previous</span>
-  
-  
-    <span class="pagination-item newer">Next</span>
-  
-</div>
-
 
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
     
-      <li>
-        <h3>
-          <a href="/_posts/2014/04/26/hrv-vo2max.html">
-            Hear rate variability during exercise
-            <small>26 Apr 2014</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/_posts/2013/12/28/introducing-hyde.html">
-            Introducing Hyde
-            <small>28 Dec 2013</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/_posts/2013/09/27/density-plots.html">
-            Density Plots
-            <small>27 Sep 2013</small>
-          </a>
-        </h3>
-      </li>
-    
   </ul>
   <a class="graybutton" href="/blog/archive/" title="an archive of all posts">Blog Archive</a>
 </div>
-
+--->
 
     </div>
-
+    <script id="dsq-count-scr" src="//swimanalytics.disqus.com/count.js" async></script>
   </body>
 </html>

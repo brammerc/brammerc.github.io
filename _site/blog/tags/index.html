@@ -13,7 +13,7 @@
 
   <title>
     
-      Tags &middot; Human Performance Analytics
+      Tags &middot; Swim Performance Analytics
     
   </title>
 
@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
 
   <!-- Icons -->
   <link rel="shortcut icon" href="/public/icon/favicon.ico">    
@@ -49,58 +50,39 @@
 
   <body class="theme-base-0d">
 
-    <head>
-	<!-- Load JQuery -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<!-- Load jquery.cookie plugin (optional) -->
-	<script type="text/javascript" src="/navgoco/src/jquery.cookie.js"></script>
-	<!-- Load jquery.navgoco plugin js and css files -->
-	<script type="text/javascript" src="/navgoco/src/jquery.navgoco.js"></script>
-	<link rel="stylesheet" href="/navgoco/src/jquery.navgoco.css" type="text/css" media="screen" />
-</head>
-
+    
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
         <a href="/">
-          Human Performance Analytics
+          Swim Performance Analytics
         </a>
       </h1>
-      <p class="lead">A data science blog dedicated to informing those with a vested interest in health, physical fitness, and sport</p>
+      <p class="lead">A data science blog dedicated to informing those with a vested interest in all things swimming related</p>
     </div>
 
-    <script type="text/javascript">
-	$(document).ready(function() {
-		$('.nav').navgoco();
-	});
-    </script>
-    <ul class="nav">
-	    <li><a href="/">Blog</a>
-		    <ul>
-			    <li><a href="/blog/archive/">Archive</a></li>
-			    <li><a href="/blog/#Categories">Categories</a></li>
-		    </ul>
-	    </li>
-	    <li><a href="/about">About</a>
-		    <ul>
-			    <li><a href="/about/#Mission">Mission</a></li>
-			    <li><a href="/about/##Objectives">Objectives</a></li>
-			    <li><a href="/about/##Contributors">Contributors</a></li>
-		    </ul>
-	    </li>
-	    <li><a href="/research">Research</a>
-		    <ul>
-			    <li><a href="/research/lanebias/">Lane Bias</a></li>
-			    <li><a href="/research/olympicbias/">Swimsuit Bias</a></li>
-		    </ul>
-	    </li>
-	    <li><a href="/contact">Contact</a></li>
-	    <li><a href="https://github.com/brammerc" target="_blank">Github</a></li>
-    </ul>
-    
-    
-
+    <nav class="sidebar-nav">
+      <a id="icon" class="sidebar-nav-item" href="/"><i class="fa fa-home fa-fw w3-hover-opacity"></i> Blog Home</a>
+      <a id="icon" class="sidebar-nav-item" href="/research"><i class="fa fa-bar-chart-o fa-fw w3-hover-opacity"></i> Research</a>
+      <a id="icon" class="sidebar-nav-item" href="/about"><i class="fa fa-question-circle-o fa-fw w3-hover-opacity"></i> About</a>
+      <a id="icon" class="sidebar-nav-item" href="/contact"><i class="fa fa-address-card-o fa-fw w3-hover-opacity"></i> Contact</a>
+      <a id="icon" href="https://github.com/brammerc" target="_blank"><i class="fa fa-github fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.linkedin.com/in/chrisbrammer" target="_blank"><i class="fa fa-linkedin fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.instagram.com/clbsandwch" target="_blank"><i class="fa fa-instagram fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.twitter.com/brammerc" target="_blank"><i class="fa fa-twitter fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="/atom.xml" target="_blank"><i class="fa fa-rss fa-fw w3-hover-opacity"></i></a>
+      <!---
+      <ul class="list-inline">
+          <li>
+            <a id="icon" href="https://github.com/brammerc" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+          </li>
+          <li>
+            <a id="icon" href="https://www.linkedin.com/in/chrisbrammer" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a>
+          </li>
+          <li>
+            <a id="icon" href="https://www.linkedin.com/in/chrisbrammer" target="_blank"><i class="fa fa-rss fa-fw"></i></a>
+          </li>
+        </ul>
+        --->
+      <!--- <a class="sidebar-nav-item" href="https://github.com/brammerc" target="_blank">GitHub</a> --->
+      <hr>
     <p>&copy; 2017. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
 	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
 	unless otherwise noted.</p>
