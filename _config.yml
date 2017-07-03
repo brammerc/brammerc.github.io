@@ -1,11 +1,7 @@
 # Dependencies
 markdown:         kramdown
-#highlighter:      pygments
+highlighter:      rouge #pygments
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  
 # Permalinks
 permalink: /_posts/:year/:month/:day/:title.html
 #relative_permalinks: true
@@ -15,7 +11,7 @@ gems: [jekyll-paginate]
 title:            Swim Performance Analytics
 tagline:          'Empowering swimming data scientists'
 description:      'A data science blog dedicated to informing those with a vested interest in all things swimming related'
-url:              http://localhost:4000
+url:              https://brammerc.github.io
 baseurl:          /
 excerpt_separator: <!--more-->
 
