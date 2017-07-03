@@ -18,7 +18,7 @@ Anecdotal reports by participants at the 2013 <img src="lanebias/pool_current.pn
 
 ## Swimsuit bias at the 2008 Olympic Games
 
-We describe a model that allows those that govern <img src="suitbias/tech_suits.png" alt="Suit Bias" style="float:right;width:25%;height:25%"> competitive swimming to identify whether or not elite-level competitions were biased due to some external factor. In particular, we test the hypothesis that the swimsuits released to the competitive swimming market in 2008 significantly improved the 2008 Olympic performances. 
+Since the early 21st century, swimsuit manufacturers <img src="suitbias/tech_suits.png" alt="Suit Bias" style="float:right;width:25%;height:25%"> have experimented with different fabrics, shapes, and stitching techniques in an effort to provide competitive swimmers with the fastest swimwear. In 2008, underspecified and vague rules regarding swimwear opened the door for a flood of buoyant, full-body swimsuits to be introduced into the competitive swimming market. What effect did these 'high-tech' suits have on elite-level swim performance?
 
 <a class="graybutton" href="/research/suitbias">Learn more</a>
 

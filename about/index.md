@@ -22,7 +22,7 @@ Characterized by an exponential growth in data being generated, stored, and shar
 
 ## Author 
 
-**Chris Brammer, PhD** <img src="Brammer/Brammer_profile.jpg" alt="Brammer profile" style="float:right;width:25%;height:25%">  
+**Chris Brammer, PhD** <img src="Brammer/Brammer_profile.jpg" alt="Brammer profile" style="float:right;width:25%;height:25%;margin-left:20px">  
 Omaha, Nebraska 
 
 *"The 'datification' of virtually all facets of life represents an enormous opportunity to inform our understanding of human performance. And I am enthusiastic about taking full advantage of the opportunity!"*
