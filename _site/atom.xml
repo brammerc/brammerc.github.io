@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Swim Performance Analytics</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2017-07-03T11:05:50-04:00</updated>
- <id>http://localhost:4000</id>
+ <link href="https://brammerc.github.io/atom.xml" rel="self"/>
+ <link href="https://brammerc.github.io/"/>
+ <updated>2017-08-03T17:29:22-04:00</updated>
+ <id>https://brammerc.github.io</id>
  <author>
    <name>Chris Brammer</name>
    <email></email>
@@ -13,46 +13,18 @@
 
  
  <entry>
-   <title>Introducing Hyde</title>
-   <link href="http://localhost:4000/_posts/2013/12/28/introducing-hyde.html"/>
-   <updated>2013-12-28T00:00:00-05:00</updated>
-   <id>http://localhost:4000/_posts/2013/12/28/introducing-hyde</id>
-   <content type="html">&lt;p&gt;Hyde is a brazen two-column &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that pairs a prominent sidebar with uncomplicated content. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
+   <title>Swimming in a Flood of Data</title>
+   <link href="https://brammerc.github.io/_posts/2017/07/06/data-flood-in-swimming.html"/>
+   <updated>2017-07-06T00:00:00-04:00</updated>
+   <id>https://brammerc.github.io/_posts/2017/07/06/data-flood-in-swimming</id>
+   <content type="html">&lt;p&gt;We are currently living in a world where a vast sea of data is being captured on nearly all athletes, and with such detail, that our ability to extract and interpret valuable information from this data is often overwhelmed. With more data being captured and recorded at a greater velocity and from a larger variety of sources, the need for data management, exploration, analysis, interpretation, and communication is clear; otherwise, what’s the point of collecting the data in the first place! 
+&lt;!--more--&gt;
+Data scientists seek to fill this need, offering organizations a way to integrate computer science skills, statistical knowledge, and domain expertise to take full advantage of the available data by discovering valuable insights that would otherwise be left uncovered.&lt;/p&gt;
 
-&lt;h3 id=&quot;built-on-poole&quot;&gt;Built on Poole&lt;/h3&gt;
+&lt;p&gt;USA Swimming (USAS), the organization governing competitive swimming in the United States, currently has the richest datasets of any other country, thanks to an information systems inititive implemented in 2003. The volume and variability of the data allows USAS the potential knowledge of how adolescent athletes from different areas of the country, or even at the level of the team, are different from one another. Additional data collected on the coaching practices, when combined with the performance data, can provide a wealth of information that can be utilized in the development of future coaching training programs. Three important problems in which the data can be use to help solve: talent identification, bias discovery and/or confirmation, dropout, coaching efficacy. 
+Within this database lays a vast potential to inform all of the sport of swimming’s stakeholders—a function that defines the primary aim of our research group within the Counsilman Center.&lt;/p&gt;
 
-&lt;p&gt;Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by &lt;a href=&quot;https://twitter.com/mdo&quot;&gt;@mdo&lt;/a&gt;. Poole, and every theme built on it (like Hyde here) includes the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Complete Jekyll setup included (layouts, config, &lt;a href=&quot;/404&quot;&gt;404&lt;/a&gt;, &lt;a href=&quot;/atom.xml&quot;&gt;RSS feed&lt;/a&gt;, posts, and &lt;a href=&quot;/about&quot;&gt;example page&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Mobile friendly design and development&lt;/li&gt;
-  &lt;li&gt;Easily scalable text and component sizing with &lt;code class=&quot;highlighter-rouge&quot;&gt;rem&lt;/code&gt; units in the CSS&lt;/li&gt;
-  &lt;li&gt;Support for a wide gamut of HTML elements&lt;/li&gt;
-  &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
-  &lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;hyde-features&quot;&gt;Hyde features&lt;/h3&gt;
-
-&lt;p&gt;In addition to the features of Poole, Hyde adds the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sidebar includes support for textual modules and a dynamically generated navigation with active link support&lt;/li&gt;
-  &lt;li&gt;Two orientations for content and sidebar, default (left sidebar) and &lt;a href=&quot;https://github.com/poole/lanyon#reverse-layout&quot;&gt;reverse&lt;/a&gt; (right sidebar), available via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/poole/hyde#themes&quot;&gt;Eight optional color schemes&lt;/a&gt;, available via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/poole/hyde#readme&quot;&gt;Head to the readme&lt;/a&gt; to learn more.&lt;/p&gt;
-
-&lt;h3 id=&quot;browser-support&quot;&gt;Browser support&lt;/h3&gt;
-
-&lt;p&gt;Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.&lt;/p&gt;
-
-&lt;h3 id=&quot;download&quot;&gt;Download&lt;/h3&gt;
-
-&lt;p&gt;Hyde is developed on and hosted with GitHub. Head to the &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;GitHub repository&lt;/a&gt; for downloads, bug reports, and features requests.&lt;/p&gt;
-
-&lt;p&gt;Thanks!&lt;/p&gt;
+&lt;p&gt;After all, sports teams are small businesses relative to the large corporations that have led the way in the use of data analytics to improve business outcomes. In swimming, data on virtually every factor that affects performance is being generated, thanks in part to the health and fitness industry who have driven wearable technology innovation. Sociological, video, biomechanical, physiological, economical,  can be used in a more comprehensive and systematic way. The advancement of wearable technologies that objectively measure sport performance and performance-related factors has afforded sports teams more access to a potential source of valuable information, but actually extracting this information is marginal among competitive organizations.&lt;/p&gt;
 </content>
  </entry>
  

@@ -11,9 +11,9 @@ title: Brammer
 
 <img src="Brammer_profile.jpg" alt="Brammer profile" style="float:right;width:25%;height:25%">
 
-Hi, I'm Chris. At the moment, I am the only contributor to this blog. <a href="/contact/">Let's start a list!</a>
+Hi, I'm Chris. I developed this website as a platform to expunge, organize, and record my work during graduate school before it was lost to history. At the moment, I am the only contributor, but am happy to collaborate. <a href="/contact/">Let's start a list!</a>
 
-Teacher. Scholar. Gardener. Outdoor adventurer.
+Teacher $\cdot$ Scholar $\cdot$ Gardener $\cdot$ Outdoor adventurer
 
 Born and raised in Nebraska, partial to southern Indiana, enchanted by North Carolina, and seeking my next stop in this great big beautiful world!  Alumnus of Truman State University and Indiana University.
 

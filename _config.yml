@@ -10,7 +10,7 @@ gems: [jekyll-paginate]
 # Setup
 title:            Swim Performance Analytics
 tagline:          'Empowering swimming data scientists'
-description:      'A data science blog dedicated to informing those with a vested interest in all things swimming related'
+description:      'A place to share data science tools and methods with the competitive swimming community'
 url:              https://brammerc.github.io
 baseurl:          /
 excerpt_separator: <!--more-->
@@ -22,7 +22,7 @@ author:
 
 linkedin: chrisbrammer
 twitter: brammerc
-instagram: clbsandwch
+instagram: humanperformancephd
 
 github:
   repo:           https://github.com/brammerc
