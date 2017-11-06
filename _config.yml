@@ -5,7 +5,7 @@ highlighter:      rouge #pygments
 # Permalinks
 permalink: /_posts/:year/:month/:day/:title.html
 #relative_permalinks: true
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # Setup
 title:            Swim Performance Analytics
@@ -17,8 +17,8 @@ excerpt_separator: <!--more-->
 
 paginate:         3
 
-#author:
-#  name:           'Chris Brammer'
+author:
+  name:           'Chris Brammer'
 
 linkedin: chrisbrammer
 twitter: brammerc
