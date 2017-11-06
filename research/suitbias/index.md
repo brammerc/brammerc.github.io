@@ -13,7 +13,7 @@ title: Suit Bias
           <article class="card card-blog-entry">
             <header class="card-header">
               <div class="card-media">
-              <a href="{{ site.url }}/research/suitbias/introduction.html" title="View more"><img alt="Card image" width="672" height="336" src="/public/images/speedo_lzr.png"></a>
+              <a href="{{ site.url }}/research/suitbias/introduction.html" title="View more"><img alt="Card image" width="269" height="200" src="/public/images/speedo_lzr.png"></a>
               </div>
             <h1 class="card-title"><a href="{{ site.url }}/research/suitbias/introduction.html" title="View more">1. The problem of performance-enhancing suits</a></h1>
             </header>
@@ -61,7 +61,7 @@ title: Suit Bias
           <article class="card card-blog-entry">
             <header class="card-header">
               <div class="card-media">
-              <a href="{{ site.url }}/research/suitbias/UStrials.html" title="View more"><img alt="Card image" width="672" height="336" src="/public/images/UStrials.jpg"></a>
+              <a href="{{ site.url }}/research/suitbias/UStrials.html" title="View more"><img alt="Card image" width="269" height="200" src="/public/images/UStrials.jpg"></a>
               </div>
             <h1 class="card-title"><a href="{{ site.url }}/research/suitbias/UStrials.html" title="View more">4. The 2008 USA Swimming Olympic Trials</a></h1>
             </header>
