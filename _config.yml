@@ -11,7 +11,7 @@ gems: [jekyll-paginate]
 title:            Swim Performance Analytics
 tagline:          'Empowering swimming data scientists'
 description:      'A place to share data science tools and methods with the competitive swimming community'
-url:              https://brammerc.github.io
+url:              http://localhost:4000 #https://brammerc.github.io
 baseurl:          /
 excerpt_separator: <!--more-->
 
