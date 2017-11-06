@@ -12,7 +12,7 @@ title:            Swim Performance Analytics
 tagline:          'Empowering swimming data scientists'
 description:      'A place to share data science tools and methods with the competitive swimming community'
 url:              https://brammerc.github.io
-baseurl:          /
+baseurl:          https://brammerc.github.io/
 excerpt_separator: <!--more-->
 
 paginate:         3
