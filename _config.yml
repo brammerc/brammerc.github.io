@@ -17,8 +17,8 @@ excerpt_separator: <!--more-->
 
 paginate:         3
 
-author:
-  name:           'Chris Brammer'
+#author:
+#  name:           'Chris Brammer'
 
 linkedin: chrisbrammer
 twitter: brammerc
