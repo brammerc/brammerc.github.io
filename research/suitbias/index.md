@@ -7,7 +7,49 @@ title: Suit Bias
 
 #### This research presents objective evidence that the 2008 Olympic Games and 2009 World Championship swimming competitions were biased due to the neoprene-panelled swimsuits that were popular at the time
 
-  <!-- First Photo Grid-->
+<div class="blog-card">
+	<div class="photo photo1"></div>
+	<ul class="details">
+		<li class="author"><a href="#">Chris Brammer</a></li>
+		<li class="date">Aug. 24, 2015</li>
+		<li class="tags">
+			<ul>
+				<li><a href="#">Learn</a></li>
+				<li><a href="#">Code</a></li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+			</ul>
+		</li>
+	</ul>
+	<div class="description">
+		<h1>Learning to Code</h1>
+		<h2>Opening a door to the future</h2>
+		<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+		<a href="#">Read More</a>
+	</div>
+</div>
+<div class="blog-card alt">
+	<div class="photo photo2"></div>
+	<ul class="details">
+		<li class="author"><a href="#">Jane Doe</a></li>
+		<li class="date">July. 15, 2015</li>
+		<li class="tags">
+			<ul>
+				<li><a href="#">Learn</a></li>
+				<li><a href="#">Code</a></li>
+				<li><a href="#">JavaScript</a></li>
+			</ul>
+		</li>
+	</ul>
+	<div class="description">
+		<h1>Mastering the Language</h1>
+		<h2>Java is not the same as JavaScript</h2>
+		<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+		<a href="#">Read More</a>
+	</div>
+</div>
+
+  <!-- 
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
           <article class="card card-blog-entry">
@@ -40,7 +82,7 @@ title: Suit Bias
           </article>
     </div>
   </div>
-  <!-- Second Photo Grid-->
+  
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
           <article class="card card-blog-entry">
@@ -75,7 +117,7 @@ title: Suit Bias
   </div>
 <hr>
 <br>
-
+-->
 <div id="shiny">
 	<iframe src="https://humanperformance.shinyapps.io/OlyPred" scrolling="no" style="border: none; width: 100%; height: 610px"></iframe><!--width: inherit ;height: 610px-->
 </div>
