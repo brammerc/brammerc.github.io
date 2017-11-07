@@ -82,6 +82,8 @@ a {
   text-decoration: none;
 }
 
+.cards-link {color: #aaa;}
+
 a strong {
   color: inherit;
 }
@@ -162,6 +164,8 @@ h5, h6 {
 h1 {
   font-size: 2rem;
 }
+
+.cards-head {font-size: 1.7rem; color: #aaa;}
 
 h2 {
   margin-top: 0.5rem;
