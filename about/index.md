@@ -17,7 +17,8 @@ title: About
 <hr>
 
 ## Rationale
-Characterized by an exponential growth in data being generated, stored, and shared on a daily basis, the dawning of the information-technology revolution and globalization has led modern sports organizations to consider advanced data analysis techniques in order to facilitate the decision-making process and ultimately improve business outcomes. Rather than base these decisions solely on wisdom and expertise, the quality of which is often compromised by gut instinct and distorted memories, some sports practitioners are now making better decisions by utilizing the cost-effective and timely methods of data science. The challenge, then, and that which constitutes the purpose of this website, is to meet the growing demand for individuals with the skills to process, analyze, and communicate the information contained within the available data.
+Characterized by an exponential growth in data being generated, stored, and shared on a daily basis, the dawning of the information-technology revolution and globalization has led modern sports organizations to consider advanced data analysis techniques in order to facilitate the decision-making process and ultimately improve business outcomes. 
+Rather than base these decisions solely on wisdom and expertise, the quality of which is often compromised by gut instinct and distorted memories, some sports practitioners are now making better decisions by utilizing the cost-effective and timely methods of data science. The challenge, then, and that which constitutes the purpose of this website, is to meet the growing demand for individuals with the skills to process, analyze, and communicate the information contained within the available data.
 <hr>
 
 ## Contributors 
