@@ -81,6 +81,9 @@ a {
   color: #268bd2;
   text-decoration: none;
 }
+
+.cards-link {color: #aaa;}
+
 a strong {
   color: inherit;
 }
