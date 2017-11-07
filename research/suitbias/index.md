@@ -12,7 +12,7 @@ title: Suit Bias
 <div class="blog-card">
 	<div class="photo photo1"></div>
 	<ul class="details">
-		<li class="author"><a href="#">Chris Brammer</a></li>
+		<li class="author"><a href="/about/Brammer">Chris Brammer</a></li>
 		<li class="date">Aug. 24, 2015</li>
 		<li class="tags">
 			<ul>
@@ -24,17 +24,16 @@ title: Suit Bias
 		</li>
 	</ul>
 	<div class="description">
-		<h2><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">The bodysuit problem</a></h2>
-		<h3>Do swimsuits enhance performance?</h3>
+		<h1 class="cards"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">The bodysuit problem</a></h1>
+		<h2>Do swimsuits enhance performance?</h2>
 		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment</p>
 		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
 </div>
-<br></br>
 <div class="blog-card alt">
 	<div class="photo photo2"></div>
 	<ul class="details">
-		<li class="author"><a href="#">Jane Doe</a></li>
+		<li class="author"><a href="{{ site.url }}/about/Brammer">Chris Brammer</a></li>
 		<li class="date">July. 15, 2015</li>
 		<li class="tags">
 			<ul>
@@ -45,10 +44,10 @@ title: Suit Bias
 		</li>
 	</ul>
 	<div class="description">
-		<h1>Record-breaking swimsuits</h1>
+		<h1 class="cards">Record-breaking swimsuits</h1>
 		<h2>The incidence rate and prevalence of swimming records</h2>
 		<p class="summary">The historical performance trend illuminates outlying performances</p>
-		<a href="{{ site.url }}/research/suitbias/records.html">Read More</a>
+		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
 </div>
 
