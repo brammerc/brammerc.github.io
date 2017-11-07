@@ -91,6 +91,8 @@
   position: relative;
 }
 .blog-card .description h1 {
+  color: #aaa;
+  font-size: 1.7rem;
   font-family: "Roboto";
   line-height: 1em;
   margin: 0 0 10px 0;
