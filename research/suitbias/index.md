@@ -7,6 +7,8 @@ title: Suit Bias
 
 #### This research presents objective evidence that the 2008 Olympic Games and 2009 World Championship swimming competitions were biased due to the neoprene-panelled swimsuits that were popular at the time
 
+<hr/>
+
 <div class="blog-card">
 	<div class="photo photo1"></div>
 	<ul class="details">
@@ -14,20 +16,21 @@ title: Suit Bias
 		<li class="date">Aug. 24, 2015</li>
 		<li class="tags">
 			<ul>
-				<li><a href="#">Learn</a></li>
-				<li><a href="#">Code</a></li>
-				<li><a href="#">HTML</a></li>
-				<li><a href="#">CSS</a></li>
+				<li><a href="#">Swimming</a></li>
+				<li><a href="#">Bias</a></li>
+				<li><a href="#">FINA</a></li>
+				<li><a href="#">Fair sport</a></li>
 			</ul>
 		</li>
 	</ul>
 	<div class="description">
-		<h1>Learning to Code</h1>
-		<h2>Opening a door to the future</h2>
-		<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-		<a href="#">Read More</a>
+		<h2><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">The bodysuit problem</a></h2>
+		<h3>Do swimsuits enhance performance?</h3>
+		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment</p>
+		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
 </div>
+<br></br>
 <div class="blog-card alt">
 	<div class="photo photo2"></div>
 	<ul class="details">
@@ -42,10 +45,10 @@ title: Suit Bias
 		</li>
 	</ul>
 	<div class="description">
-		<h1>Mastering the Language</h1>
-		<h2>Java is not the same as JavaScript</h2>
-		<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-		<a href="#">Read More</a>
+		<h1>Record-breaking swimsuits</h1>
+		<h2>The incidence rate and prevalence of swimming records</h2>
+		<p class="summary">The historical performance trend illuminates outlying performances</p>
+		<a href="{{ site.url }}/research/suitbias/records.html">Read More</a>
 	</div>
 </div>
 
