@@ -49,7 +49,7 @@ title: Suit Bias
 	</div>
 </div>
 
-  <!-- 
+<!-- 
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
           <article class="card card-blog-entry">
