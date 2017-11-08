@@ -329,10 +329,6 @@ img {
   border-radius: 5px;
 }
 
-.post-image img {
-  float: right;
-}
-
 /* Tables */
 table {
   margin-bottom: 1rem;
