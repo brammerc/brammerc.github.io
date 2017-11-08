@@ -89,7 +89,7 @@ title: Suit Bias
 	</ul>
 	<div class="description">
 		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">2008 Olympic Trials </a></h1>
-		<h2>Suits freely available to all swimmers</h2> <!-- limit to 37 characters -->
+		<h2>When suits were available to all</h2> <!-- limit to 37 characters -->
 		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment Swimmers with access to the suits had an advantage over others depending on their lane assignment how many more</p>
 		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
