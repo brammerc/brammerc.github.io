@@ -16,7 +16,7 @@ Anecdotal reports by participants at the 2013 <img src="lanebias/pool_current.pn
 
 <hr>
 
-## Swimsuit bias at the 2008 Olympic Games
+## Assessing the impact of 'floatation' suits on swim performance
 
 Since the early 21st century, swimsuit manufacturers <img src="suitbias/tech_suits.png" alt="Suit Bias" style="float:right;width:25%;height:25%"> have experimented with different fabrics, shapes, and stitching techniques in an effort to provide competitive swimmers with the fastest swimwear. In 2008, underspecified and vague rules regarding swimwear opened the door for a flood of buoyant, full-body swimsuits to be introduced into the competitive swimming market. What effect did these 'high-tech' suits have on elite-level swim performance?
 

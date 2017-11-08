@@ -3,9 +3,9 @@ layout: page
 title: Suit Bias
 ---
 
-# Quantitative assessment of the impact of 'floatation' suits
+# Assessing the impact of 'floatation' suits on swim performance
 
-#### This research presents objective evidence that the 2008 Olympic Games and 2009 World Championship swimming competitions were biased due to the neoprene-panelled swimsuits that were popular at the time
+#### This research presents objective evidence that the 2008 Olympic Games and 2009 World Championship swimming competitions were biased due to the neoprene-laden swimsuits that were popular at the time
 
 <hr/>
 
@@ -26,7 +26,8 @@ title: Suit Bias
 	<div class="description">
 		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">The bodysuit problem</a></h1>
 		<h2>Do swimsuits enhance performance?</h2>
-		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment Swimmers with access to the suits had an advantage over others depending on their lane assignment how many more than what you think <a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a></p>
+		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment Swimmers with access to the suits had an advantage over others depending on their lane assignment how many</p>
+		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
 </div>
 
@@ -46,7 +47,8 @@ title: Suit Bias
 	<div class="description">
 		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">World-record bedlam!</a></h1>
 		<h2>The rate and prevalence of records</h2> <!-- limit to 37 characters -->
-		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment Swimmers with access to the suits had an advantage over others depending on their lane assignment how many more what you think is enough <a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a></p>
+		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment Swimmers with access to the suits had an advantage over others depending on their lane assignment how many more</p>
+		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
 </div>
 
@@ -65,7 +67,7 @@ title: Suit Bias
 		</li>
 	</ul>
 	<div class="description">
-		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">Suits, or no suits? </a></h1>
+		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">Suits, or no suits?&nbsp;</a></h1>
 		<h2>Japanese Olympic trials & Japan Open</h2>
 		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment Swimmers with access to the suits had an advantage over others depending on their lane assignment how many more</p>
 		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>

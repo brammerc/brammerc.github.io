@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Swimming in a Flood of Data
+image: pool_current.png
 comments: true
 ---
 
