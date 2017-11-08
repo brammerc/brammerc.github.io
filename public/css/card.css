@@ -122,10 +122,15 @@
   left: 0;
 }
 
-.blog-card .description .cards-head a:after {
+.blog-card .description .cards-head a {
   color: #aaa;
   float: left;
 }
+
+.blog-card .description .cards-head a:after {
+  content: none;
+}
+
 
 .blog-card .description a {
   /*color: #268bd2;*/
