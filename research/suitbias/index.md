@@ -27,7 +27,7 @@ title: Suit Bias
 		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">The bodysuit problem</a></h1>
 		<h2>Do swimsuits enhance performance?</h2>
 		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment</p>
-		<div class="more"><a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a></div>
+		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
 </div>
 <div class="blog-card alt">
