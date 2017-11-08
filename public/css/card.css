@@ -96,7 +96,6 @@
   font-family: "Roboto";
   line-height: 1em;
   margin: 0 0 10px 0;
-  text-align: left;
 }
 .blog-card .description h2 {
   color: #9b9b9b;
@@ -125,8 +124,7 @@
 
 .blog-card .description .cards-head a {
   color: #aaa;
-  margin-bottom: 10px;
-  float: right;
+  float: left;
 }
 
 .blog-card .description a {
