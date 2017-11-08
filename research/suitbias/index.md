@@ -16,15 +16,15 @@ title: Suit Bias
 		<li class="date">Aug. 24, 2015</li>
 		<li class="tags">
 			<ul>
-				<li><a href="#">Swimming</a></li>
-				<li><a href="#">Bias</a></li>
-				<li><a href="#">FINA</a></li>
-				<li><a href="#">Fair sport</a></li>
+				<li>Swimming</li>
+				<li>Bias</li>
+				<li>FINA</li>
+				<li>Fair sport</li>
 			</ul>
 		</li>
 	</ul>
 	<div class="description">
-		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">The bodysuit problems</a></h1>
+		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">The bodysuit problem</a></h1>
 		<h2>Do swimsuits enhance performance?</h2>
 		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment Swimmers with access to the suits had an advantage over others depending on their lane assignment how many more words can I include?</p>
 		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
@@ -46,7 +46,7 @@ title: Suit Bias
 	<div class="description">
 		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">Record-breaking swimsuits</a></h1>
 		<h2>The rate and prevalence of records</h2> <!-- limit to 37 characters -->
-		<p class="summary">The historical performance trend illuminates outlying performances Swimmers with access to the suits had an advantage over others depending on their lane assignment </p>
+		<p class="summary">The historical performance trend illuminates outlying performances Swimmers with access to the suits had an advantage over others depending on their lane assign</p>
 		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
 </div>
