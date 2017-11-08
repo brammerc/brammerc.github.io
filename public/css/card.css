@@ -122,7 +122,7 @@
   left: 0;
 }
 
-.blog-card .description .cards-head a {
+.blog-card .description .cards-head a:after {
   color: #aaa;
   float: left;
 }
