@@ -75,7 +75,7 @@
   content: "\f02b";
 }
 .blog-card .details .tags li {
-  display: inline-block;
+  display: inline;
   margin-right: 3px;
 }
 .blog-card .details a {
@@ -83,7 +83,7 @@
   border-bottom: 1px dotted;
 }
 .blog-card .details a:hover {
-  color: #268bd2;
+  opacity: 0.6;
 }
 .blog-card .description {
   padding: 5px;
@@ -133,7 +133,7 @@
   margin-bottom: 10px;
   float: right;
 }
-.blog-card .description a:after {
+.blog-card .description .more a:after {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   content: "\f061";
@@ -142,10 +142,14 @@
   opacity: 0;
   vertical-align: middle;
 }
-.blog-card .description a:hover:after {
+.blog-card .description .more a:hover:after {
   margin-left: 5px;
-  opacity: 1;
+  opacity: 0.6;
 }
+.blog-card .description a:hover {
+  opacity: 0.6;
+}
+
 
 @media screen and (min-width: 600px) {
   .blog-card {
