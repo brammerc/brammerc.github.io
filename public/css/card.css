@@ -95,10 +95,9 @@
   opacity: 0.6;
 }
 .blog-card .description {
-  padding: 5px;
+  padding: 5px 5px 10px 5px;
   box-sizing: border-box;
   position: relative;
-  margin: 0 0 10px 0;
 }
 .blog-card .description h1 {
   font-size: 1.7rem; 
