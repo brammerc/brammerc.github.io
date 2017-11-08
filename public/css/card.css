@@ -98,6 +98,7 @@
   padding: 5px;
   box-sizing: border-box;
   position: relative;
+  display: inline-block;
 }
 .blog-card .description h1 {
   font-size: 1.7em; 
@@ -105,6 +106,7 @@
   font-family: "Roboto";
   line-height: 1em;
   margin: 0 0 10px 0;
+  /*display: inline-block;*/
 }
 .blog-card .description h2 {
   color: #9b9b9b;
