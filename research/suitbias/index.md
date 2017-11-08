@@ -8,7 +8,7 @@ title: Suit Bias
 #### This research presents objective evidence that the 2008 Olympic Games and 2009 World Championship swimming competitions were biased due to the neoprene-panelled swimsuits that were popular at the time
 
 <hr/>
-<!-- card title: 20 char, sub.title: 35 char, summary: 214 char, -->
+<!-- card title: 20 char, sub.title: 37 char, summary: 214 char, -->
 <div class="blog-card">
 	<div class="photo photo1"></div>
 	<ul class="details">
@@ -45,8 +45,8 @@ title: Suit Bias
 	</ul>
 	<div class="description">
 		<h1 class="cards-head"><a href="{{ site.url }}/research/suitbias/introduction.html" title="Read more">World-record bedlam</a></h1>
-		<h2>The rate and prevalence of records records</h2> <!-- limit to 37 characters -->
-		<p class="summary">The historical performance trend illuminates outlying performances Swimmers with access to the suits had an advantage over others depending on their lane assign</p>
+		<h2>The rate and prevalence of records</h2> <!-- limit to 37 characters -->
+		<p class="summary">Swimmers with access to the suits had an advantage over others depending on their lane assignment Swimmers with access to the suits had an advantage over others depending on their lane assignment how many more</p>
 		<a href="{{ site.url }}/research/suitbias/introduction.html">Read More</a>
 	</div>
 </div>
