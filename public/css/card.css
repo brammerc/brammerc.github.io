@@ -28,14 +28,23 @@
   height: 200px;
   position: relative;
 }
-.blog-card .photo.photo1 {
+.blog-card .photo .photo1 {
   background: url("/public/images/speedo_lzr.png") center no-repeat;
   background-size: cover;
 }
-.blog-card .photo.photo2 {
+.blog-card .photo .photo2 {
   background: url("/public/images/old_suit.jpg") center no-repeat;
   background-size: cover;
 }
+.blog-card .photo .photo3 {
+  background: url("/public/images/kitajima.jpg") center no-repeat;
+  background-size: cover;
+}
+.blog-card .photo .photo4 {
+  background: url("/public/images/UStrials.jpg") center no-repeat;
+  background-size: cover;
+}
+
 .blog-card .details {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
