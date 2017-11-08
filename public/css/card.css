@@ -76,7 +76,7 @@
 }
 .blog-card .details .tags li {
   display: inline-block;
-  margin-right: 3px;
+  /*margin-right: 3px;*/
 }
 .blog-card .details a {
   color: inherit;
