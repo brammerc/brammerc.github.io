@@ -7,11 +7,7 @@ layout: default
   <span class="post-date">{{ page.date | date_to_string }} {% if page.tags.size < 1 %} {% else %}| <i class="fa fa-tags" style="font-size: .8em"></i> {% for tag in page.tags %}
     <a href="{{ site.url }}/archive/tags/#{{ tag }}" style="font-size: 16px;">{{ tag }}&nbsp;</a>
   {% endfor %} {% endif %} </span>
-  {% if post.image %}
-	    <p>
-	    	<a href="{{ post.url }}"><img class="centered" src="/public/images/{{post.image}}" alt=""></a>
-    	</p>
-  {% endif %}
+  
   {{ content }}
 </div>
 {% include share-bar.html %}
