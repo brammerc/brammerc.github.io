@@ -9,6 +9,7 @@ title: Suit Bias
 
 <hr/>
 
+<br>
 <div class="blog-card">
 	<div class="photo photo1"></div>
 	<ul class="details">
