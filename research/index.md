@@ -10,7 +10,7 @@ layout: page
 <hr/>
 ## Lane bias in elite-level swimming competition
 
-Anecdotal reports by participants at the 2013 <img class="post-image" src="lanebias/pool_current.png" alt="Pool current illustration"> World Swimming Championship suggested currents were present in the pool such that, when swimming toward the finishing end, swimmers were at a competitive disadvantage on one side of the pool and at an advantage on the opposite side. Does the data confirm this rumor?
+Anecdotal reports by participants at the 2013 ![Pool current illustration]({{ site.url }}/public/images/pool_current.png){:class="post-image"} World Swimming Championship suggested currents were present in the pool such that, when swimming toward the finishing end, swimmers were at a competitive disadvantage on one side of the pool and at an advantage on the opposite side. Does the data confirm this rumor?
 
 <a class="graybutton" href="/research/lanebias/">Learn more</a>
 
@@ -18,7 +18,7 @@ Anecdotal reports by participants at the 2013 <img class="post-image" src="laneb
 
 ## Assessing the impact of 'floatation' suits on swim performance
 
-Since the early 21st century, swimsuit manufacturers <img src="suitbias/tech_suits.png" alt="Suit Bias" style="float:right;width:25%;height:25%"> have experimented with different fabrics, shapes, and stitching techniques in an effort to provide competitive swimmers with the fastest swimwear. In 2008, underspecified and vague rules regarding swimwear opened the door for a flood of buoyant, full-body swimsuits to be introduced into the competitive swimming market. What effect did these 'high-tech' suits have on elite-level swim performance?
+Since the early 21st century, swimsuit manufacturers ![Suit Bias]({{ site.url }}/research/suitbias/tech_suits.png){:class="post-image"} have experimented with different fabrics, shapes, and stitching techniques in an effort to provide competitive swimmers with the fastest swimwear. In 2008, underspecified and vague rules regarding swimwear opened the door for a flood of buoyant, full-body swimsuits to be introduced into the competitive swimming market. What effect did these 'high-tech' suits have on elite-level swim performance?
 
 <a class="graybutton" href="/research/suitbias">Learn more</a>
 

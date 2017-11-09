@@ -29,11 +29,11 @@
   position: relative;
 }
 .blog-card .photo.photo1 {
-  background: url("/public/images/old_suit.png") center no-repeat;
+  background: url("/public/images/old_suit.jpg") center no-repeat;
   background-size: cover;
 }
 .blog-card .photo.photo2 {
-  background: url("/public/images/speedo_lzr.jpg") center no-repeat;
+  background: url("/public/images/speedo_lzr.png") center no-repeat;
   background-size: cover;
 }
 .blog-card .photo.photo3 {
