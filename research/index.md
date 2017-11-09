@@ -8,7 +8,7 @@ layout: page
 #### Specifics regarding data processing and analyses from some of our peer-reviewed manuscripts, conference proceedings and presentations.
 
 <hr/>
-<br>
+
 <h2><a style="color: #313131;" href="{{ site.url }}/research/lanebias/" title="Learn more">Lane bias in elite-level swimming competition</a></h2>
 
 Anecdotal reports by participants at the 2013 ![Pool current illustration]({{ site.url }}/public/images/pool_current.png){:class="post-image"} World Swimming Championship suggested currents were present in the pool such that, when swimming toward the finishing end, swimmers were at a competitive disadvantage on one side of the pool and at an advantage on the opposite side. Does the data confirm this rumor?
