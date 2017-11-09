@@ -329,10 +329,10 @@ img {
   border-radius: 5px;
 }
 
-.post-image img {
-  height:200px;    
-  overflow:hidden;
-  position:relative;
+.post-image {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
   float: right;
 }
 
