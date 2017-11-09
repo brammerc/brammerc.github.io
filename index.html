@@ -15,7 +15,8 @@ Swim Performance Analytics
   <div class="post">
     <div class="blog-card">
       {% if post.image %}
-	    	<a href="{{ post.url }}"><img class="photo" src="/public/images/{{post.image}}" alt="Read more"></a>
+	    	<div class="photo" style="background: url('/public/images/{{post.image}}') center no-repeat;
+  background-size: cover;"></div>
     	{% endif %}
 	      <ul class="details">
 		      <li class="author"><a href="/about/Brammer">Chris Brammer</a></li>
