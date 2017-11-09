@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Performance Distributi
+title: Performance Distributio
 subtitle: The need for data science
 tags: [density, statistics]
 image: pool_current.png
