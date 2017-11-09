@@ -325,8 +325,16 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0.5rem 1rem;
+  margin: 0.5rem 0.5rem;
   border-radius: 5px;
+}
+
+.post img {
+  width:300px;
+  height:300px;    
+  overflow:hidden;
+  position:relative;
+  float: right;
 }
 
 /* Tables */
