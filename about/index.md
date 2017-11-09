@@ -25,8 +25,10 @@ Rather than base these decisions solely on wisdom and expertise, the quality of 
 ## Contributors 
 
 <div style="line-height: 1em;">
-**Chris Brammer, PhD**   
-![Brammer profile]({{ site.url }}/about/Brammer/Brammer_profile.jpg){:class="post-image"}  
+**Chris Brammer, PhD**
+
+![Brammer profile]({{ site.url }}/about/Brammer/Brammer_profile.jpg){:class="post-image"}
+
 Omaha, Nebraska
 </div>
 
