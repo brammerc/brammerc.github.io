@@ -144,7 +144,6 @@ h1 {
 }
 
 h2, h3 {
-  margin-bottom: 0rem;
   font-weight: bold;
   line-height: 1.25;
   color: #313131;
@@ -164,10 +163,12 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   font-size: 1.5rem;
 }
 h3 {
+  margin-bottom: 0rem;
   margin-top: 1.5rem;
   font-size: 1.25rem;
 }
@@ -455,7 +456,7 @@ tbody tr:nth-child(odd) th {
   margin-top: 0;
 }
 
-.page .post-title a {
+.content .container .page .post-title a {
   color: #313131;
 }
 /* Meta data line below post title */
