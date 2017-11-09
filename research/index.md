@@ -16,7 +16,7 @@ Anecdotal reports by participants at the 2013 ![Pool current illustration]({{ si
 <a class="graybutton" href="/research/lanebias/">Learn more</a>
 
 <hr>
-<h2><a style="color: #313131;" href="{{ site.url }}/research/suitbias/" title="Learn more">Assessing the impact of 'floatation' suits on swim performance</a></h2>
+<h2 style="margin-top: 1em;"><a style="color: #313131;" href="{{ site.url }}/research/suitbias/" title="Learn more">Assessing the impact of 'floatation' suits on swim performance</a></h2>
 
 Since the early 21st century, swimsuit manufacturers ![Suit Bias]({{ site.url }}/research/suitbias/tech_suits.png){:class="post-image"} have experimented with different fabrics, shapes, and stitching techniques in an effort to provide competitive swimmers with the fastest swimwear. In 2008, underspecified and vague rules regarding swimwear opened the door for a flood of buoyant, full-body swimsuits to be introduced into the competitive swimming market. What effect did these 'high-tech' suits have on elite-level swim performance?
 
