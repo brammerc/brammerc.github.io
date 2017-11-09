@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Swimming in a Flood of Data
-subtitle: The need for data science
 image: pool_current.png
 comments: true
 ---
