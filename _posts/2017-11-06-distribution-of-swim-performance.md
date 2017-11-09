@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Distribution of Swim Performance
+title: Performance Distribution
 subtitle: The need for data science
 tags: [density, statistics]
 image: pool_current.png
