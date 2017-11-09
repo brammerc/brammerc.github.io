@@ -25,6 +25,7 @@ Rather than base these decisions solely on wisdom and expertise, the quality of 
 ## Contributors 
 
 **Chris Brammer, PhD** ![Brammer profile]({{ site.url }}/about/Brammer/Brammer_profile.jpg){:class="post-image"} 
+
 Omaha, Nebraska 
 
 *"The 'datification' of virtually all facets of life represents an enormous opportunity to inform our understanding of human performance. And I am enthusiastic about taking full advantage of the opportunity!"*
