@@ -90,7 +90,6 @@ a:hover,
 a:focus {
   opacity:0.60;
 }
-/*
 atag {
   color: #9a9a9a;
   text-decoration: none;
@@ -100,7 +99,7 @@ atag:hover,
 atag:focus {
   opacity:0.60;
   color: #268bd2;
-}*/
+}
 .graybutton { 
   background: #f2f2f2; 
   -moz-border-radius: 5px; 
@@ -144,7 +143,7 @@ h1 {
   margin-bottom: 0.2em;
 }
 
-h2, h3, {
+h2, h3 {
   margin-bottom: 0rem;
   font-weight: bold;
   line-height: 1.25;
@@ -445,13 +444,20 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
+  color: #aaa;
+}
+.posts .post .post-title a {
   color: #313131;
 }
+
 .page-title,
 .post-title {
   margin-top: 0;
 }
 
+.page .post-title a {
+  color: #313131;
+}
 /* Meta data line below post title */
 .post-date {
   display: block;
