@@ -12,6 +12,39 @@ Swim Performance Analytics
 
 <div class= "posts">
 {% for post in paginator.posts %}
+  <div class="post">
+    <div class="blog-card">
+      {% if post.image %}
+	    <p>
+	    	<a href="{{ post.url }}"><img class="post-image" src="/public/images/{{post.image}}" alt="Read more"></a>
+    	</p>
+    	{% endif %}
+	      <ul class="details">
+		      <li class="author"><a href="/about/Brammer">Chris Brammer</a></li>
+		      <li class="date">{{ post.date | date_to_string }}</li>
+		      <li class="tags">
+			      <ul>
+				      <li>Swimming</li>
+				      <li>Bias</li>
+				      <li>FINA</li>
+				      <li>Fair sport</li>
+			      </ul>
+		      </li>
+	      </ul>
+	      <div class="description">
+		      <h1 class="cards-head"><a href="{{ post.url }}" title="Read more">{{ post.title }}</a></h1>
+		      <h2>{{ post.subtitle }}</h2>
+		      <p class="summary">{{ post.excerpt }}</p>
+		      <a href="{{ post.url }}">Read More</a>
+	      </div>
+      </div>
+    </div>
+  <hr/>
+{% endfor %}
+</div>
+<!--
+<div class= "posts">
+{% for post in paginator.posts %}
     <div class="post">
     <h2 class="post-title">
       <a href="{{ post.url }}">
@@ -30,6 +63,7 @@ Swim Performance Analytics
   <hr/>
 {% endfor %}
 </div>
+-->
 
 <div class="pagination">
   {% if paginator.next_page %}
