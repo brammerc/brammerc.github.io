@@ -90,6 +90,7 @@ a:hover,
 a:focus {
   opacity:0.60;
 }
+/*
 atag {
   color: #9a9a9a;
   text-decoration: none;
@@ -99,7 +100,7 @@ atag:hover,
 atag:focus {
   opacity:0.60;
   color: #268bd2;
-}
+}*/
 .graybutton { 
   background: #f2f2f2; 
   -moz-border-radius: 5px; 
