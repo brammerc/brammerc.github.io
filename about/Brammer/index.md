@@ -9,7 +9,7 @@ title: Brammer
 
 <hr/>
 
-<img src="Brammer_profile.jpg" alt="Brammer profile" style="float:right;width:35%;height:35%">
+<img src="Milford_waterfall.jpg" alt="Milford Sound" style="float:right;width:35%;height:35%">
 
 Hi, I'm Chris. I originally developed this website as a platform to expunge, organize, and record my work related to swimming data science before it was lost to history. 
 
