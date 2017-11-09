@@ -9,11 +9,10 @@ title: Brammer
 
 <hr/>
 
-<img src="Milford_waterfall.jpg" alt="Milford Sound" style="float:right;width:35%;height:35%">
-
 Hi, I'm Chris. I originally developed this website as a platform to expunge, organize, and record my work related to swimming data science before it was lost to history. 
 
 Teacher \\( \cdot \\) Scholar \\( \cdot \\) Gardener \\( \cdot \\) Outdoor adventurer
+<img src="Milford_waterfall.jpg" alt="Milford Sound" style="float:right;width:50%;height:50%">
 
 Born and raised in Nebraska, partial to southern Indiana, enchanted by North Carolina, and seeking my next stop in this great big beautiful world!  Alumnus of Truman State University and Indiana University.
 
