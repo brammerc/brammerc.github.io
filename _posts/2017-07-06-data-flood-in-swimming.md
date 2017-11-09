@@ -2,6 +2,7 @@
 layout: post
 title: Swimming in Data
 subtitle: The need for data science
+tags: [data science, moneyball]
 image: pool_current.png
 comments: true
 ---

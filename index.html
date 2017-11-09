@@ -13,6 +13,8 @@ Swim Performance Analytics
 <div class= "posts">
 {% for post in paginator.posts %}
   <div class="post">
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    {% if thecycle == 'odd' %}
     <div class="blog-card">
       {% if post.image %}
 	    	<div class="photo" style="background: url('/public/images/{{post.image}}') center no-repeat;
@@ -37,6 +39,27 @@ Swim Performance Analytics
 		    <a href="{{ post.url }}">Read More</a>
       </div>
     </div>
+    {% else %}
+    <div class="blog-card alt">
+      {% if post.image %}
+	    	<div class="photo" style="background: url('/public/images/{{post.image}}') center no-repeat;
+  background-size: cover;"></div>
+    	{% endif %}
+	      <ul class="details">
+		      <li class="author"><a href="/about/Brammer">Chris Brammer</a></li>
+		      <li class="date">{{ post.date | date_to_string }}</li>
+		      {% if page.tags.size < 1 %} {% else %}| <i class="fa fa-tags" style="font-size: .8em"></i> {% for tag in page.tags %}
+          <a href="{{ site.url }}/archive/tags/#{{ tag }}" style="font-size: 16px;">{{ tag }}&nbsp;</a>
+          {% endfor %} {% endif %}
+	      </ul>
+      <div class="description">
+		    <h1 class="cards-head"><a href="{{ post.url }}" title="Read more">{{ post.title }}</a></h1>
+		    <h2>{{ post.subtitle }}</h2>
+		    <div class="summary">{{ post.excerpt }}</div>
+		    <a href="{{ post.url }}">Read More</a>
+      </div>
+    </div>
+    {% endif %}
   </div>
 {% endfor %}
 </div>
