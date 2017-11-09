@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Performance Distributio
+title: Swimming in Data
 subtitle: The need for data science
 tags: [data science, moneyball]
 image: pool_current.png
