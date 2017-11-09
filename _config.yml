@@ -10,7 +10,7 @@ plugins: [jekyll-paginate]
 # Setup
 title:            Swim Performance Analytics
 tagline:          'Empowering swimming data scientists'
-description:      'Sharing data science tools and methods with the competitive swimming community'
+description:      'Sharing data science tools and methods with the swimming community'
 url:              https://brammerc.github.io
 baseurl:          https://brammerc.github.io/
 excerpt_separator: <!--more-->
