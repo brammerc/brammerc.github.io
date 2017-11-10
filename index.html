@@ -23,9 +23,9 @@ Swim Performance Analytics
 	      <ul class="details">
 		      <li class="author"><a href="/about/Brammer">Chris Brammer</a></li>
 		      <li class="date">{{ post.date | date_to_string }}</li>
-		      {% if post.tags.size < 1 %} {% else %} <i class="fa fa-tags" style="font-size: .8em"></i> {% for tag in post.tags %}
+		      {% if post.tags.size < 1 %} {% else %} <li class="tags"> {% for tag in post.tags %}
           <a href="{{ site.url }}/archive/#{{ tag }}" style="font-size: 14px;">{{ tag }}</a>
-          {% endfor %} {% endif %}
+          {% endfor %}</li> {% endif %}
 	      </ul>
       <div class="description">
 		    <h1 class="cards-head"><a href="{{ post.url }}" title="Read more">{{ post.title }}</a></h1>
