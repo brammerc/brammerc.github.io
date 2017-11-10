@@ -339,6 +339,7 @@ img {
 
 .author-image {
   height: 300px;
+  object-fit: cover;
   float: right;
 }
 
