@@ -337,6 +337,11 @@ img {
   float: right;
 }
 
+.author-image {
+  height: 300px;
+  position: relative;
+}
+
 /* Tables */
 table {
   margin-bottom: 1rem;
