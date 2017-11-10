@@ -8,7 +8,7 @@ title: Brammer
 #### I'm an exercise physiologist with a unique background in data science who hopes to enlighten and inform those with a vested interest in health, physical fitness, and sport.
 
 <hr/>
-<div style="margin-bottom: 2.5em;"></div>
+<div style="margin-bottom: 0.5em;">&nbsp;</div>
 Hi, I'm Chris. I originally developed this website as a platform to expunge, organize, and record my work related to swimming data science before it was lost to history. 
 
 Teacher \\( \cdot \\) Scholar \\( \cdot \\) Gardener \\( \cdot \\) Outdoor adventurer
