@@ -8,7 +8,7 @@ title: Contact
 #### Contact me if you have questions or comments about the contents of this website, or if you are interested in collaborating on a data science project.
 
 <hr/>
-<div style="margin-bottom: 0.5em;"></div>
+
 ## Email 
 The easiest way to get in touch with me is by email. I especially welcome constructive criticism and collaboration.
 
