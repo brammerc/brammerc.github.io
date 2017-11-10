@@ -75,17 +75,17 @@
 .blog-card .details .date:before {
   content: "\f133";
 }
-/*.blog-card .details .tags ul {
+.blog-card .details .tags ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}*/
-.blog-card .details .tags li {
-  display: inline;
-  /*margin-right: 3px;*/
 }
-.blog-card .details .tags:before {
+.blog-card .details .tags ul:before {
   content: "\f02b";
+}
+.blog-card .details .tags li {
+  display: inline-block;
+  /*margin-right: 3px;*/
 }
 .blog-card .details a {
   color: inherit;
