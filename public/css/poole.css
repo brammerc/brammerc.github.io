@@ -339,7 +339,7 @@ img {
 
 .author-image {
   height: 300px;
-  position: relative;
+  float: right;
 }
 
 /* Tables */
