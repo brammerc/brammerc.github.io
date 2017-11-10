@@ -84,7 +84,7 @@
   display: inline;
   /*margin-right: 3px;*/
 }
-.blog-card .details .tags li:before {
+.blog-card .details .tags:before {
   content: "\f02b";
 }
 .blog-card .details a {
