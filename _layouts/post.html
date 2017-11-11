@@ -4,12 +4,13 @@ layout: default
 
 <div class="post">
   <h1 >{{ page.title }}</h1>
-  <h1 style="font-size: 1em;margin: 5px 0;">{% include author.html %}</h1>
+  <h1 style="font-size: 1em;margin: -5px 0 5px 0;">{% include author.html %}</h1>
   <span class="post-date">{{ page.date | date_to_string }} {% if page.tags.size < 1 %} {% else %}| <i class="fa fa-tags" style="font-size: .8em"></i> {% for tag in page.tags %}
     <a href="{{ site.url }}/archive/#{{ tag }}" style="font-size: 16px;">{{ tag }}</a>
   {% endfor %} {% endif %} </span>
   
   {{ content }}
+  <hr>
 </div>
 {% include share-bar.html %}
 <div class="pagination">
