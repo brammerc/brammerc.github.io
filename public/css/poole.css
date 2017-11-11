@@ -707,7 +707,7 @@ a.pagination-item:hover {
 }
 .fa-tags:before {
   content: "\f02c";
-  margin-right: 10px;
+  /*margin-right: 10px;*/
 }
 
 /* Cards for research posts 

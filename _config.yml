@@ -17,8 +17,15 @@ excerpt_separator: <!--more-->
 
 paginate:         3
 
+# the site author
 author:
   name:           'Chris Brammer'
+
+# contributors
+chris_brammer:
+    name: Chris Brammer
+    email: humanperformanceanalytics@gmail.com
+    web: http://www.chrisbrammer.com/
 
 linkedin: chrisbrammer
 twitter: brammerc
