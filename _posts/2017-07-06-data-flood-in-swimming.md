@@ -3,7 +3,7 @@ layout: post
 title: Swimming in Flood of Data
 subtitle: The need for data science
 tags: [data science, moneyball]
-image: pool_current.png
+image: data_growth.png
 comments: true
 ---
 
