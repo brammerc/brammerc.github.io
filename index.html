@@ -7,7 +7,7 @@ title: Home
 Swim Performance Analytics
 </h1>
 
-<h4>This blog seeks to demonstrate how to extract valuable information from the ever-growing sea of swim performance data</h4>
+<h4>Sharing data science methods and insights with the swimming community</h4>
 <hr/>
 
 <div class= "posts">
@@ -23,14 +23,14 @@ Swim Performance Analytics
 	      <ul class="details">
 	        <li><i class="fa fa-user" style="font-size: 16px"><a href="/about/Brammer">Chris Brammer</a></i></li>
 	        <li><i class="fa fa-calendar" style="font-size: 16px">{{ post.date | date_to_string }}</i></li>
-		      {% if post.tags.size < 1 %} {% else %} <i class="fa fa-tags" style="font-size: 16px"></i> {% for tag in post.tags %}
-          <a href="{{ site.url }}/archive/#{{ tag }}" style="font-size: 14px;">{{ tag }}</a>
+		      {% if post.tags.size < 1 %} {% else %} <i class="fa fa-tags" style="font-size: 16px; margin-right: 3px;"></i> {% for tag in post.tags %}
+          <a href="{{ site.url }}/archive/#{{ tag }}" style="font-size: 0.8rem">{{ tag }}</a>
           {% endfor %} {% endif %}
 	      </ul>
       <div class="description">
 		    <h1 class="cards-head"><a href="{{ post.url }}" title="Read more">{{ post.title }}</a></h1>
 		    <h2>{{ post.subtitle }}</h2>
-		    <div class="summary">{{ post.excerpt }}</div>
+		    <p class="summary">{{ post.excerpt }}</p>
 		    <a href="{{ post.url }}">Read More</a>
       </div>
     </div>
