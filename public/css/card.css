@@ -1,5 +1,4 @@
 /*PEN STYLES*/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700);
 .blog-card {
   transition: height 0.3s ease;
   -webkit-transition: height 0.3s ease;
@@ -44,6 +43,26 @@
   background: url("/public/images/UStrials.jpg") center no-repeat;
   background-size: cover;
 }
+.blog-card .photo.photo5 {
+  background: url("/public/images/Hinrichs_current.png") center no-repeat;
+  background-size: cover;
+}
+.blog-card .photo.photo6 {
+  background: url("/public/images/barca_2013.jpg") center no-repeat;
+  background-size: cover;
+}
+.blog-card .photo.photo7 {
+  background: url("/public/images/world_champs2007.jpg") center no-repeat;
+  background-size: cover;
+}
+.blog-card .photo.photo8 {
+  background: url("/public/images/maria_lenk.jpg") center no-repeat;
+  background-size: cover;
+}
+.blog-card .photo.photo9 {
+  background: url("/public/images/pool_current.png") center no-repeat;
+  background-size: cover;
+}
 
 .blog-card .details {
   transition: all 0.3s ease;
@@ -64,6 +83,7 @@
 .blog-card .details > li {
   padding: 3px 0;
 }
+/*
 .blog-card .details li:before, .blog-card .details .tags ul:before {
   font-family: FontAwesome;
   margin-right: 10px;
@@ -77,6 +97,7 @@
 }
 .blog-card .details .tags ul {
   list-style: none;
+  display: inline-block;
   margin: 0;
   padding: 0;
 }
@@ -85,8 +106,9 @@
 }
 .blog-card .details .tags li {
   display: inline-block;
-  /*margin-right: 3px;*/
+  margin-right: 3px;
 }
+*/
 .blog-card .details a {
   color: inherit;
   border-bottom: 1px dotted;
@@ -103,7 +125,7 @@
 .blog-card .description h1 {
   font-size: 1.3rem; 
   color: #aaa;
-  font-family: "Roboto";
+  font-family: "Open Sans";
   line-height: 1em;
   margin: 0 0 0 0;
   display: inline-block;

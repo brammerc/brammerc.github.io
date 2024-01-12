@@ -7,7 +7,8 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="keywords" content="swimming performance, data analysis, statistics, data visualization" />
   <meta name="author" content='Chris Brammer' />
-  <meta name="description" content="Website of Chris Brammer" />
+  <meta name="description" content="Sharing data science methods and insights with the swimming community">
+
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <meta name="theme-color" content="#ffffff">
@@ -22,8 +23,12 @@
   <link rel="stylesheet" href="/public/css/poole.css">
   <link rel="stylesheet" href="/public/css/syntax.css">
   <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
   <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel='stylesheet prefetch' href='https://codepen.io/ChynoDeluxe/pen/eJPeEL'>
+  <link rel="stylesheet" href="/public/css/card.css">
 
   <!-- Icons -->
   <link rel="shortcut icon" href="/public/icon/favicon.ico">  
@@ -33,7 +38,7 @@
   <link rel="manifest" href="/public/icon/manifest.json">
   <link rel="mask-icon" href="/public/icon/safari-pinned-tab.svg" color="#5bbad5">
   <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> -->
-
+  
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 </head>
@@ -50,16 +55,17 @@
           Swim Performance Analytics
         </a>
       </h1>
-      <p class="lead">A place to share data science tools and methods with the competitive swimming community</p>
+      <p class="lead">Sharing data science methods and insights with the swimming community</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a id="icon" class="sidebar-nav-item active" href="/"><i class="fa fa-home fa-fw w3-hover-opacity"></i> Blog Home</a>
-      <a id="icon" class="sidebar-nav-item" href="/research"><i class="fa fa-bar-chart-o fa-fw w3-hover-opacity"></i> Research</a>
       <a id="icon" class="sidebar-nav-item" href="/about"><i class="fa fa-question-circle-o fa-fw w3-hover-opacity"></i> About</a>
-      <a id="icon" class="sidebar-nav-item" href="/contact"><i class="fa fa-address-card-o fa-fw w3-hover-opacity"></i> Contact</a>
+      <a id="icon" class="sidebar-nav-item active" href="http://localhost:4000"><i class="fa fa-home fa-fw w3-hover-opacity"></i> Blog Home</a>
+      <a id="icon" class="sidebar-nav-item" href="/topics"><i class="fa fa-bar-chart-o fa-fw w3-hover-opacity"></i> Special Topics</a>
+      <a id="icon" class="sidebar-nav-item" href="/connect"><i class="fa fa-address-card-o fa-fw w3-hover-opacity"></i> Connect</a>
       <a id="icon" href="https://github.com/brammerc" target="_blank"><i class="fa fa-github fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.linkedin.com/in/chrisbrammer" target="_blank"><i class="fa fa-linkedin fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.instagram.com/humanperformancephd" target="_blank"><i class="fa fa-instagram fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="https://www.twitter.com/brammerc" target="_blank"><i class="fa fa-twitter fa-fw w3-hover-opacity"></i>&nbsp;</a><a id="icon" href="/atom.xml" target="_blank"><i class="fa fa-rss fa-fw w3-hover-opacity"></i></a>
       <!---
+      <a id="icon" class="sidebar-nav-item" href="/services"><i class="fa fa-handshake-o fa-fw w3-hover-opacity"></i> Services</a>
       <ul class="list-inline">
           <li>
             <a id="icon" href="https://github.com/brammerc" target="_blank"><i class="fa fa-github fa-fw"></i></a>
@@ -74,8 +80,8 @@
         --->
       <!--- <a class="sidebar-nav-item" href="https://github.com/brammerc" target="_blank">GitHub</a> --->
       <hr>
-    <p>&copy; 2017. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
-	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">(CC) BY-NC-SA license</a>, 
+    <p>&copy; 2019. <a href="/about/Brammer">Chris Brammer</a>. All contents under 
+	<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><i class="fa fa-creative-commons"></i> BY-NC-SA license</a>, 
 	unless otherwise noted.</p>
   </div>
 </div>
@@ -83,31 +89,66 @@
 
 
     <div class="content container">
+
       <h1>
 Swim Performance Analytics
 </h1>
 
-<h4>This blog seeks to demonstrate how to extract valuable information from the ever-growing sea of swim performance data.</h4>
+<h4>Sharing data science methods and insights with the swimming community</h4>
 <hr/>
 
 <div class= "posts">
 
+  <div class="post">
+    
+    
+    <div class="blog-card">
+      
+	    	<div class="photo" style="background: url('/public/images/data_growth.png') center no-repeat;
+  background-size: cover;"></div>
+    	
+	      <ul class="details">
+	        <li><i class="fa fa-user" style="font-size: 16px"><a href="/about/Brammer">Chris Brammer</a></i></li>
+	        <li><i class="fa fa-calendar" style="font-size: 16px">06 Jul 2017</i></li>
+		       <i class="fa fa-tags" style="font-size: 16px; margin-right: 3px;"></i> 
+          <a href="http://localhost:4000/archive/#data science" style="font-size: 0.8rem">data science</a>
+          
+          <a href="http://localhost:4000/archive/#moneyball" style="font-size: 0.8rem">moneyball</a>
+           
+	      </ul>
+      <div class="description">
+		    <h1 class="cards-head"><a href="/_posts/2017/07/06/data-flood-in-swimming.html" title="Read more">The need for data scientists in sport</a></h1>
+		    <h2>Data is the new gold</h2>
+		    <p class="summary">The dawning of the information-technology revolution and globalization, which can be characterized by exponential growth in data being generated, stored, and shared on a daily basis, has led modern sport organizations to invest</p>
+		    <a href="/_posts/2017/07/06/data-flood-in-swimming.html">Read More</a>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+<!--
+<div class= "posts">
+
     <div class="post">
-    <h1 class="post-title">
+    <h2 class="post-title">
       <a href="/_posts/2017/07/06/data-flood-in-swimming.html">
-        Swimming in a Flood of Data
+        The need for data scientists in sport
       </a>
-    </h1>
+    </h2>
 
     <span class="post-date">06 Jul 2017</span>
       
-    <p>The dawning of the information-technology revolution and globalization, which can be characterized by exponential growth in data being generated, stored, and shared on a daily basis, has led modern sport organizations to consider advanced data analysis techniques to</p>
-
-
+	    <p>
+	    	<a href="/_posts/2017/07/06/data-flood-in-swimming.html"><img class="post-image" src="/public/images/data_growth.png" alt="Read more"></a>
+    	</p>
+    	
+    The dawning of the information-technology revolution and globalization, which can be characterized by exponential growth in data being generated, stored, and shared on a daily basis, has led modern sport organizations to invest
     <p>	<a class="graybutton" href="/_posts/2017/07/06/data-flood-in-swimming.html">Read more</a></p>
   <hr/>
 
 </div>
+-->
 
 <div class="pagination">
   

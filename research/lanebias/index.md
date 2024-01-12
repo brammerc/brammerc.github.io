@@ -1,8 +1,0 @@
----
-layout: page
-title: Lane Bias Introduction
----
-
-# Introduction
-
-The purpose of sports competition is rank competitors based on accurate measurements of performances such as points, goals, time, etc. Though the rules of competition reflect an attempt to guarantee fairness, accurate measurement of performance is occasionally complicated by the fact that unwanted factors provide some competitors with an unfair advantage over others. For example, anecdotal reports by participants at the 2013 World Swimming Championship suggested currents were present in the pool such that, when swimming toward the finishing end, swimmers were at a competitive disadvantage on one side of the pool and at an advantage on the opposite side. Ideally, physical measurements of the pool environment would confirm or refute these rumors, but the pool was temporary and deconstructed immediately following the completion of the competition. Fortunately, a detailed objective record of the results of the 2013 World Championships and many other international competitions are available for analysis. Thus, the primary purpose of this project was to analyze the results of Olympic, World Championship, and US National Championship swimming competitions (N=18) to confirm whether or not some swimmers were advantaged over others due to the lanes to which they were assigned (Lane Bias). If Lane Bias exists, then secondary aims were to determine whether the bias affected the outcomes of the competition and, given the relatively recent use of temporary competition pools, whether the bias was dependent on the permanence of the pool.
